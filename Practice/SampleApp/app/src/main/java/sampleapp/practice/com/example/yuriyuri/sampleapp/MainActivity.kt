@@ -1,7 +1,7 @@
 package sampleapp.practice.com.example.yuriyuri.sampleapp
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
