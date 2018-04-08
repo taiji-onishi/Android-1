@@ -2,7 +2,7 @@ package sampleapp.practice.com.example.yuriyuri.sampleapp.data.repository
 
 import io.reactivex.Flowable
 import sampleapp.practice.com.example.yuriyuri.model.TagModel
-import sampleapp.practice.com.example.yuriyuri.sampleapp.data.QiitaApi
+import sampleapp.practice.com.example.yuriyuri.sampleapp.data.api.QiitaApi
 import sampleapp.practice.com.example.yuriyuri.sampleapp.data.api.NetworkClient
 import sampleapp.practice.com.example.yuriyuri.sampleapp.util.AppSchedulerProvider
 import sampleapp.practice.com.example.yuriyuri.sampleapp.util.SchedulerProvider

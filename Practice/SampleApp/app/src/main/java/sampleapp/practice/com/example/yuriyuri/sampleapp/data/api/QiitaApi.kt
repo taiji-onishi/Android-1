@@ -1,4 +1,4 @@
-package sampleapp.practice.com.example.yuriyuri.sampleapp.data
+package sampleapp.practice.com.example.yuriyuri.sampleapp.data.api
 
 import android.support.annotation.CheckResult
 import io.reactivex.Flowable
