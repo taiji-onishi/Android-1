@@ -6,11 +6,14 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.rxkotlin.addTo
 import sampleapp.practice.com.example.yuriyuri.model.TagModel
 import sampleapp.practice.com.example.yuriyuri.sampleapp.R
 import sampleapp.practice.com.example.yuriyuri.sampleapp.databinding.FragmentTagsBinding
 import sampleapp.practice.com.example.yuriyuri.sampleapp.databinding.ItemTagBinding
+import sampleapp.practice.com.example.yuriyuri.sampleapp.presentation.Result
 import sampleapp.practice.com.example.yuriyuri.sampleapp.presentation.common.view.ArrayRecyclerAdapter
 import sampleapp.practice.com.example.yuriyuri.sampleapp.presentation.common.view.BindingHolder
 import sampleapp.practice.com.example.yuriyuri.sampleapp.presentation.common.view.SpaceItemDecoration
@@ -40,16 +43,27 @@ class TagsFragment :
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         setupRecyclerView()
-        /*
-        * 課題3：
-        * TagsViewModel#loadTagListを使いタグ一覧(Result<List<TagModel>>)を取得してください.
-        * 通知データに応じて、下記の処理を行ってください.
-        *
-        * ロード開始：binding.progress.visibility = View.VISIBLEを記載し、ローディングプログレスを表示
-        * ロード完了(成功)：renderViews(list: List<TagModel>)を呼び出しリストに表示
-        * ロード完了(失敗)：トーストでエラーメッセージを表示
-        * */
-        // TODO:loadTagList and handling tagList
+        // Tagデータの取得
+        tagsViewModel.loadTagList(1)!!
+                .subscribe {
+                    when (it) {
+                        is Result.Success -> {
+                            renderViews(it.data)
+                        }
+                        is Result.Failure -> {
+                            Toast.makeText(this.context, it.errorMessage, Toast.LENGTH_SHORT).show()
+                        }
+                        is Result.InProgress -> {
+                            binding.progress.visibility = View.VISIBLE
+                        }
+                    }
+                }
+                .addTo(compositeDisposable)
+    }
+
+    override fun onStop() {
+        super.onStop()
+        compositeDisposable.clear()
     }
 
     /**
