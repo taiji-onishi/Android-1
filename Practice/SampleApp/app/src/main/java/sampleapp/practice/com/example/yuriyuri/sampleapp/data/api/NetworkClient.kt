@@ -5,7 +5,6 @@ import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.moshi.MoshiConverterFactory
-import sampleapp.practice.com.example.yuriyuri.sampleapp.data.QiitaApi
 import javax.inject.Singleton
 
 /**

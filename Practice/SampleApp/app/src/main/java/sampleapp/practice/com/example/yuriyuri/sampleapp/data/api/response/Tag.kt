@@ -9,7 +9,7 @@ data class Tag(
         @Json(name = "followers_count")
         var followersCount: Int,
         @Json(name = "icon_url")
-        var tagIconImageUrl: String,
+        var tagIconImageUrl: String?,
         @Json(name = "id")
         var tagId: String,
         @Json(name = "items_count")
