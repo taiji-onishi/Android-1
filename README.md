@@ -9,7 +9,7 @@
 
 ## 学習内容一覧
 * Rxjava
-  * [資料](https://github.com/nyanc0/Android/wiki/RxJava)
+  * [資料](https://github.com/nyanc0/Android/wiki/doc_RxJava)
   * [課題](https://github.com/nyanc0/Android/wiki/ex_Rxjava)
 
 ## SampleAppについて
