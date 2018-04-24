@@ -22,7 +22,7 @@ class TagsViewModel {
      *
      * @param nextPage 何ページ目か
      */
-    fun loadTagList(nextPage: Int): Flowable<Result<List<TagModel>>>? {
+    fun loadTagList(nextPage: Int): Flowable<Result<List<TagModel>>> {
         return repository.refreshTags(nextPage, 20, "count")
                 .map {
                     Result.success(it)

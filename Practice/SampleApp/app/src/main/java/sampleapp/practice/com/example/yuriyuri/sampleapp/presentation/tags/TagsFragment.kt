@@ -44,7 +44,7 @@ class TagsFragment :
         super.onActivityCreated(savedInstanceState)
         setupRecyclerView()
         // Tagデータの取得
-        tagsViewModel.loadTagList(1)!!
+        tagsViewModel.loadTagList(1)
                 .subscribe {
                     when (it) {
                         is Result.Success -> {
