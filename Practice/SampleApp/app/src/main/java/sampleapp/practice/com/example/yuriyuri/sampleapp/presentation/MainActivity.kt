@@ -2,12 +2,12 @@ package sampleapp.practice.com.example.yuriyuri.sampleapp.presentation
 
 import android.databinding.DataBindingUtil
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import dagger.android.support.DaggerAppCompatActivity
 import sampleapp.practice.com.example.yuriyuri.sampleapp.R
 import sampleapp.practice.com.example.yuriyuri.sampleapp.databinding.ActivityMainBinding
 import sampleapp.practice.com.example.yuriyuri.sampleapp.presentation.tags.TagsFragment
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : DaggerAppCompatActivity() {
 
     private val binding: ActivityMainBinding by lazy {
         DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
