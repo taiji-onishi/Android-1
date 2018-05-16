@@ -12,12 +12,13 @@ import sampleapp.practice.com.example.yuriyuri.sampleapp.util.SchedulerProvider
  * タグデータ取得レポジトリ実装クラス.</br>
  * 実際にどこから取得するかはこのクラスのみが知っている.
  */
+// ここに引数ありのコンストラクタでInjectできるようにする
 class TagDataRepository : TagRepository {
 
-    // 課題
-    // NetworkClientクラスを削除し、QiitaApiとAppSchedulerProviderを
+    // 課題：
+    // NetworkClientクラスを削除し、QiitaApiとSchedulerProviderを
     // TagDataRepositoryのコンストラクタでInjectして渡してください.
-    // AppSchedulerProviderはすでにAppModuleで指定されています.
+    // SchedulerProviderはすでにAppModuleで指定され、Injectできるようになっています.
 
     private val netWorkClient: NetworkClient = NetworkClient.instance
     private val qiitaApi: QiitaApi = netWorkClient.provideQiitaApi()
