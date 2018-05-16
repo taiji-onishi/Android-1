@@ -9,8 +9,10 @@ import sampleapp.practice.com.example.yuriyuri.sampleapp.presentation.tags.TagsF
 
 @Module
 interface MainActivityModule {
+
     @Binds
     fun providesAppCompatActivity(mainActivity: MainActivity): AppCompatActivity
+
 
     @ContributesAndroidInjector
     fun contributeTagsFragment(): TagsFragment

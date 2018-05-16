@@ -12,5 +12,6 @@ open class ViewModelModule {
 
     @Singleton
     @Provides
-    fun provideTagsViewModel(repository: TagRepository, schedulerProvider: SchedulerProvider): TagsViewModel = TagsViewModel(repository, schedulerProvider)
+    fun provideTagsViewModel(repository: TagRepository, schedulerProvider: SchedulerProvider): TagsViewModel
+            = TagsViewModel(repository, schedulerProvider)
 }
