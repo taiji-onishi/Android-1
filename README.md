@@ -11,6 +11,9 @@
 * Rxjava
   * [資料](https://github.com/nyanc0/Android/wiki/doc_RxJava)
   * [課題](https://github.com/nyanc0/Android/wiki/ex_Rxjava)
+* DI/Dagger
+  * [資料](https://github.com/nyanc0/Android/wiki/doc_DI_Dagger)
+  * [課題](https://github.com/nyanc0/Android/wiki/ex_DI_Dagger)
 
 ## SampleAppについて
 SampleAppは各項目の学習を目的としたアプリです。  
