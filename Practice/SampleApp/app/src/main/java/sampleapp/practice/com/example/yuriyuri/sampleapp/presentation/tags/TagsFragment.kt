@@ -1,12 +1,12 @@
 package sampleapp.practice.com.example.yuriyuri.sampleapp.presentation.tags
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import dagger.android.support.DaggerFragment
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
 import sampleapp.practice.com.example.yuriyuri.model.TagModel
@@ -17,21 +17,23 @@ import sampleapp.practice.com.example.yuriyuri.sampleapp.presentation.Result
 import sampleapp.practice.com.example.yuriyuri.sampleapp.presentation.common.view.ArrayRecyclerAdapter
 import sampleapp.practice.com.example.yuriyuri.sampleapp.presentation.common.view.BindingHolder
 import sampleapp.practice.com.example.yuriyuri.sampleapp.presentation.common.view.SpaceItemDecoration
+import javax.inject.Inject
 
 /**
  * タグ一覧Fragment
  */
 class TagsFragment :
-        Fragment() {
+        DaggerFragment() {
+
+    /** ViewModel */
+    @Inject
+    lateinit var tagsViewModel: TagsViewModel
 
     /** DataBinding */
     private lateinit var binding: FragmentTagsBinding
     /** Adapter */
     private lateinit var tagsAdapter: TagsAdapter
-    /**
-     * ViewModel.ViewModelを介してデータを取得する.
-     */
-    private val tagsViewModel: TagsViewModel = TagsViewModel()
+
     /** Disposable */
     private val compositeDisposable: CompositeDisposable = CompositeDisposable()
 

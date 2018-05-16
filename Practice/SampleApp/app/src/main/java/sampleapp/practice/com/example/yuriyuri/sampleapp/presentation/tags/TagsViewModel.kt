@@ -2,20 +2,19 @@ package sampleapp.practice.com.example.yuriyuri.sampleapp.presentation.tags
 
 import io.reactivex.Flowable
 import sampleapp.practice.com.example.yuriyuri.model.TagModel
-import sampleapp.practice.com.example.yuriyuri.sampleapp.data.repository.TagDataRepository
 import sampleapp.practice.com.example.yuriyuri.sampleapp.data.repository.TagRepository
 import sampleapp.practice.com.example.yuriyuri.sampleapp.presentation.Result
-import sampleapp.practice.com.example.yuriyuri.sampleapp.util.AppSchedulerProvider
 import sampleapp.practice.com.example.yuriyuri.sampleapp.util.SchedulerProvider
+import javax.inject.Inject
 
 /**
  * TagsFragmentのViewModel.</br>
  * TagsFragmentはこのクラスが定義するメソッドからデータ取得を行う
  */
-class TagsViewModel {
-
-    private val appSchedulerProvider: SchedulerProvider = AppSchedulerProvider()
-    private val repository: TagRepository = TagDataRepository()
+class TagsViewModel @Inject constructor(
+        private val repository: TagRepository,
+        private val appSchedulerProvider: SchedulerProvider
+){
 
     /**
      * タグデータを取得
