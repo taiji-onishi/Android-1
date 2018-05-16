@@ -12,10 +12,16 @@ import sampleapp.practice.com.example.yuriyuri.sampleapp.di.module.ViewModelModu
 import sampleapp.practice.com.example.yuriyuri.sampleapp.presentation.SampleApp
 import javax.inject.Singleton
 
+/**
+ * Modulesに必要なModuleを記載する.
+ * SubComponentについては、親のModuleだけでOK.
+ */
 @Singleton
 @Component(modules = [
+    // ApplicationクラスでDaggerApplicationを使うときは必須.supportLibraryをつかはない場合はAndroidInjectionModuleを利用.
     AndroidSupportInjectionModule::class,
     AppModule::class,
+    // 利用するModuleを追加する.
     ActivityModule::class,
     NetworkModule::class,
     ViewModelModule::class])

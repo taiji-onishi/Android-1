@@ -22,6 +22,6 @@ open class SampleApp : DaggerApplication() {
                 .application(this) // AppComponentのBuilderで設定
                 .networkModule(NetworkModule.instance) // AppComponentのBuilderで設定
                 .viewModelModule(ViewModelModule())
-                .build() // AppComponentのBuilderで設定
+                .build()
     }
 }

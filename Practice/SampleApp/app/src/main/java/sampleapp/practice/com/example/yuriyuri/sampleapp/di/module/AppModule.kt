@@ -13,6 +13,7 @@ import javax.inject.Singleton
 
 @Module
 internal object AppModule {
+
     @Singleton
     @Provides
     @JvmStatic
@@ -23,13 +24,14 @@ internal object AppModule {
     @JvmStatic
     fun provideSchedulerProvider(): SchedulerProvider = AppSchedulerProvider()
 
+    /**
+     * AppComponentでBuildしているNetworkModuleインスタンスを介して、
+     * QiitaApiとSchedulerProvideのインスタンスが解決される
+     */
     @Singleton
     @Provides
     @JvmStatic
-    fun provideTagRepository(
-            api: QiitaApi,
-            schedulerProvider: SchedulerProvider
-    ): TagRepository =
+    fun provideTagRepository(api: QiitaApi, schedulerProvider: SchedulerProvider): TagRepository =
             TagDataRepository(api, schedulerProvider)
 
 }

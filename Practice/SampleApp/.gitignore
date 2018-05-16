@@ -21,7 +21,6 @@ proguard/
 *.iws
 app/build/
 
-.idea/*.xml
-.idea/codeStyles/*.xml
+.idea/
 !.idea/gradle.xml
 !.idea/runConfigurations/*.xml
