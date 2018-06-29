@@ -1,26 +1,17 @@
 # AndroidTraining
-Android初心者が技術者として立ちあがるために必要な技術要素集です。  
-
+## 注意事項
 Androidの技術要素を学ぶことが目的のため、  
 設計思想や可読性の高いコードを書くことを目的としていません。(いずれはやりたい)  
 また、普通ライブラリ使うよね、というところもAPI以外は学習のためAndroidの標準機能を使っています。  
 データバインディングなど、その他についてもいずれ書き足す予定です。  
 Kotlinのコードについては割と適当なので間違っている部分もあるかもです。
 
-## 対象
-* Javaをなんとなく触ったことがあるレベルのほとんどプログラミング初心者
-
-## 進め方
-1. 各技術要素の資料を読む
-2. 各資料の最後の問題に答える
-3. 各技術要素と関連した課題を行う
-
 ## はじめに
 1. [Androidとは？](https://github.com/nyanc0/Android/wiki/100_What_is_Android)
 2. [開発環境の構築](https://github.com/nyanc0/Android/wiki/100_Develop_AndroidStudio)
 3. [Hello World](https://github.com/nyanc0/Android/wiki/100_Let_Start_Hello_World)
 
-## 資料集
+## 資料一覧
 ### Activityと4大コンポーネント
 * [Activity](https://github.com/nyanc0/Android/wiki/200_Activity)
 * [タスク,スタック,起動モード](https://github.com/nyanc0/Android/wiki/200_Activity_Stack_LaunchMode)
