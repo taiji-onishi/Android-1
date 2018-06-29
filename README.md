@@ -42,6 +42,7 @@ Kotlinのコードについては割と適当なので間違っている部分�
 * [代替リソース](https://github.com/nyanc0/Android/wiki/240_sub_res)
 
 ### API通信
+* [URLConnection](https://github.com/nyanc0/Android/wiki/220_URLConnection)
 * [Gson](https://github.com/nyanc0/Android/wiki/220_Gson)
 * [OkHttp](https://github.com/nyanc0/Android/wiki/220_OkHttp)
 
