@@ -1,44 +1,43 @@
 package training.practice.com.example.yuriyuri.androidtraining
 
-import android.content.Intent
-import android.content.IntentFilter
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.widget.Button
-import training.practice.com.example.yuriyuri.androidtraining.ExplicitBroadcastReceiverDynamic.Companion.BROADCAST_DYNAMIC
 
-class MainActivity : AppCompatActivity() {
 
-    private lateinit var explicitBroadcastReceiverDynamic : ExplicitBroadcastReceiverDynamic
+class MainActivity : AppCompatActivity(), TestFragment1.OnFragmentBtnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val explicitBtnM = findViewById<Button>(R.id.explicit_button_manifest)
-        explicitBtnM.setOnClickListener {
-            // 明示的Intentの生成
-            val mIntent = Intent(this@MainActivity, ExplicitBroadcastReceiverManifest::class.java)
-            mIntent.putExtra("message", "明示的Intent(Manifest)")
-            sendBroadcast(mIntent)
-        }
+        // FragmentManagerの取得
+        val fragmentManager = supportFragmentManager
+        // FragmentTransactionの取得
+        val fragmentTransaction = fragmentManager.beginTransaction()
 
-        val explicitBtnD = findViewById<Button>(R.id.explicit_button_dynamic)
-        explicitBtnD.setOnClickListener {
-            // 暗黙的Intentの生成
-            val dIntent = Intent()
-            dIntent.putExtra("message", "暗黙的Intent(動的)")
-            dIntent.action = BROADCAST_DYNAMIC
-            sendBroadcast(dIntent)
-        }
+        // TestFragment1に渡す値
+        val bundle = Bundle()
+        bundle.putString("test", "MainActivityからもらったよ")
+        val testFragment1 = TestFragment1()
+        // TestFragment1にセット
+        testFragment1.arguments = bundle
 
-        val intentFilter = IntentFilter(BROADCAST_DYNAMIC)
-        explicitBroadcastReceiverDynamic = ExplicitBroadcastReceiverDynamic()
-        this.registerReceiver(explicitBroadcastReceiverDynamic, intentFilter)
+        // コンテナにTestFragment1を挿入する
+        fragmentTransaction.add(R.id.container, testFragment1)
+        // 画面にFragmentを表示
+        fragmentTransaction.commit()
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        unregisterReceiver(explicitBroadcastReceiverDynamic)
+    override fun onFragment1ButtonClicked() {
+        // FragmentManagerの取得
+        val fragmentManager = supportFragmentManager
+        // FragmentTransactionの取得
+        val fragmentTransaction = fragmentManager.beginTransaction()
+
+        // TestFragment1をTestFragment2に入れ替え
+        fragmentTransaction.replace(R.id.container, TestFragment2())
+        // バックスタック制御
+        fragmentTransaction.addToBackStack(null)
+        fragmentTransaction.commit()
     }
 }
