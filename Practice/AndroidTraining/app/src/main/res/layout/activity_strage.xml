@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/save_private_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="save private" />
+
+    <Button
+        android:id="@+id/save_public_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="save public" />
+
+    <Button
+        android:id="@+id/read_private_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="read private" />
+
+    <Button
+        android:id="@+id/read_public_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="read public" />
+
+    <TextView
+        android:id="@+id/file_dir_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="path:" />
+
+    <TextView
+        android:id="@+id/file_saved_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="saved:" />
+</LinearLayout>
