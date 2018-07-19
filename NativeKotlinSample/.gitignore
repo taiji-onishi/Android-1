@@ -20,3 +20,4 @@ app/build/
 !.idea/runConfigurations/*.xml
 
 /.idea/caches
+.idea/

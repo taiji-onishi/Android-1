@@ -1,7 +1,7 @@
 package com.example.kotlin.anative.nyanc0.nativekotlinsample.di
 
-import com.example.kotlin.anative.nyanc0.nativekotlinsample.data.ApplicationJsonAdapterFactory
-import com.example.kotlin.anative.nyanc0.nativekotlinsample.data.RecipeApi
+import com.example.kotlin.anative.nyanc0.nativekotlinsample.data.rest.ApplicationJsonAdapterFactory
+import com.example.kotlin.anative.nyanc0.nativekotlinsample.data.rest.RecipeApi
 import com.squareup.moshi.Moshi
 import dagger.Module
 import dagger.Provides

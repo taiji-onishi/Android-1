@@ -1,4 +1,4 @@
-package com.example.kotlin.anative.nyanc0.nativekotlinsample.data
+package com.example.kotlin.anative.nyanc0.nativekotlinsample.data.rest
 
 import com.squareup.moshi.JsonAdapter
 import se.ansman.kotshi.KotshiJsonAdapterFactory
