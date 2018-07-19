@@ -18,3 +18,5 @@ app/build/
 
 !.idea/gradle.xml
 !.idea/runConfigurations/*.xml
+
+/.idea/caches
