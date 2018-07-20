@@ -1,7 +1,8 @@
-package com.example.kotlin.anative.nyanc0.nativekotlinsample
+package com.example.kotlin.anative.nyanc0.nativekotlinsample.presentation
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.example.kotlin.anative.nyanc0.nativekotlinsample.R
 
 class MainActivity : AppCompatActivity() {
 
