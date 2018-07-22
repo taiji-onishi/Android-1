@@ -7,13 +7,13 @@ class RecipeModel {
   final String introduction;
   final int recommendFlg;
 
-  static fromJson(json) {
+  factory RecipeModel.fromJson(json) {
     var recipeName = json["recipe_name"];
     var photoUrl = json["main_gazo"];
     var introduction = json["introduction"];
     var recommendedFlg = int.parse(json["recommended_flg"]);
 
-    return new RecipeModel(
+    return RecipeModel(
          recipeName, photoUrl, introduction, recommendedFlg);
   }
 }
