@@ -5,7 +5,7 @@ import android.arch.persistence.room.RoomDatabase
 import com.example.kotlin.anative.nyanc0.nativekotlinsample.data.db.dao.RecipeDao
 import com.example.kotlin.anative.nyanc0.nativekotlinsample.data.db.entity.RecipeDbEntity
 
-@Database(entities = [RecipeDbEntity::class], version = 1)
+@Database(entities = [RecipeDbEntity::class], version = 1, exportSchema = false)
 abstract class RecipeAppDatabase : RoomDatabase() {
     abstract fun recipeDao(): RecipeDao
 }

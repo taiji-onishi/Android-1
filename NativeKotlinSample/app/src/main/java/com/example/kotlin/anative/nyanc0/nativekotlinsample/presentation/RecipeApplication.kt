@@ -1,6 +1,7 @@
 package com.example.kotlin.anative.nyanc0.nativekotlinsample.presentation
 
 import android.support.v7.app.AppCompatDelegate
+import com.example.kotlin.anative.nyanc0.nativekotlinsample.di.DaggerAppComponent
 import com.example.kotlin.anative.nyanc0.nativekotlinsample.di.DbModule
 import com.example.kotlin.anative.nyanc0.nativekotlinsample.di.NetworkModule
 import dagger.android.AndroidInjector

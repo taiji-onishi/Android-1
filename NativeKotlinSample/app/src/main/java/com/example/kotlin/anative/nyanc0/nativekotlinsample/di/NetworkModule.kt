@@ -29,7 +29,7 @@ open class NetworkModule {
             : Retrofit {
         return Retrofit.Builder()
                 .client(okHttpClient)
-                .baseUrl("http://10.0.0.2:3000/recipe/")
+                .baseUrl("http://10.0.0.2:3000/recipe")
                 .addConverterFactory(MoshiConverterFactory.create(Moshi.Builder()
                         .add(ApplicationJsonAdapterFactory.INSTANCE)
                         .build()))
