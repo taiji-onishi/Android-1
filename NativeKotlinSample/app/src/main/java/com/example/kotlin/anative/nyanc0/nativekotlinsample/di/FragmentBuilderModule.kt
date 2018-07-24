@@ -1,0 +1,11 @@
+package com.example.kotlin.anative.nyanc0.nativekotlinsample.di
+
+import com.example.kotlin.anative.nyanc0.nativekotlinsample.presentation.RecipeListFragment
+import dagger.Module
+import dagger.android.ContributesAndroidInjector
+
+@Module
+public abstract class FragmentBuilderModule {
+    @ContributesAndroidInjector
+    abstract fun contributeRecipeListFragment(): RecipeListFragment
+}

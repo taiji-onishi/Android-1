@@ -8,7 +8,7 @@ import javax.inject.Singleton
 
 @Singleton
 interface RecipeApi {
-    @GET
+    @GET("/recipe")
     @CheckResult
     fun getRecipeList(): Single<List<RecipeRestEntity>>
 }

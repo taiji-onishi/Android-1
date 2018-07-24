@@ -2,6 +2,7 @@ package com.example.kotlin.anative.nyanc0.nativekotlinsample.presentation.common
 
 import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.LiveDataReactiveStreams
+import android.arch.lifecycle.Transformations
 import android.support.annotation.CheckResult
 import com.example.kotlin.anative.nyanc0.nativekotlinsample.presentation.Result
 import com.example.kotlin.anative.nyanc0.nativekotlinsample.util.SchedulerProvider
@@ -23,7 +24,8 @@ fun <T> Flowable<T>.toResult(schedulerProvider: SchedulerProvider):
     }
 }
 
-@CheckResult fun <T> Observable<T>.toResult(schedulerProvider: SchedulerProvider):
+@CheckResult
+fun <T> Observable<T>.toResult(schedulerProvider: SchedulerProvider):
         Observable<Result<T>> {
     return compose { item ->
         item
@@ -34,10 +36,16 @@ fun <T> Flowable<T>.toResult(schedulerProvider: SchedulerProvider):
     }
 }
 
-@CheckResult fun <T> Completable.toResult(schedulerProvider: SchedulerProvider):
+@CheckResult
+fun <T> Completable.toResult(schedulerProvider: SchedulerProvider):
         Observable<Result<T>> {
     return toObservable<T>().toResult(schedulerProvider)
 }
 
-fun <T> Publisher<T>.toLiveData()
-        = LiveDataReactiveStreams.fromPublisher(this) as LiveData<T>
+fun <T> Publisher<T>.toLiveData() = LiveDataReactiveStreams.fromPublisher(this) as LiveData<T>
+
+inline fun <X, Y> LiveData<X>.map(crossinline transformer: (X) -> Y): LiveData<Y> =
+        Transformations.map(this, { transformer(it) })
+
+inline fun <X, Y> LiveData<X>.switchMap(crossinline transformer: (X) -> LiveData<Y>): LiveData<Y> =
+        Transformations.switchMap(this, { transformer(it) })
