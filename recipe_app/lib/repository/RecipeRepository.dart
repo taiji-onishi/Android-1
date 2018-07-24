@@ -8,8 +8,8 @@ class RecipeRepository {
 
   RecipeRepository(this._recipeApi);
 
-  Future<List<RecipeModel>> findAll(){
-    return _recipeApi.getRecipe().then((recipe){
+  Future<List<RecipeModel>> findAll() {
+    return _recipeApi.getRecipe().then((recipe) {
       return recipe.values.toList();
     });
   }

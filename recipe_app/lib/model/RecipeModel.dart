@@ -1,11 +1,11 @@
 class RecipeModel {
-  const RecipeModel(this.recipeName, this.photoUrl,
-      this.introduction, this.recommendFlg);
+  const RecipeModel(
+      this.recipeName, this.photoUrl, this.introduction, this.recommendFlg);
 
   final String recipeName;
   final String photoUrl;
   final String introduction;
-  final int recommendFlg;
+  final bool recommendFlg;
 
   factory RecipeModel.fromJson(json) {
     var recipeName = json["recipe_name"];
@@ -14,6 +14,6 @@ class RecipeModel {
     var recommendedFlg = int.parse(json["recommended_flg"]);
 
     return RecipeModel(
-         recipeName, photoUrl, introduction, recommendedFlg);
+        recipeName, photoUrl, introduction, recommendedFlg == 1 ? true : false);
   }
 }

@@ -30,12 +30,11 @@ class AllRecipePageState extends State<RecipePage> {
           backgroundColor: Colors.red,
           title: Text("Recipe App"),
         ),
-        body: ListView.builder(
+        body: new ListView.builder(
           itemCount: _items.length,
           itemBuilder: (context, index) {
             RecipeModel item = _items[index];
-
-            return Image.network(item.photoUrl);
+            return RecipeItem(recipe: item);
           },
         ),
       ),
