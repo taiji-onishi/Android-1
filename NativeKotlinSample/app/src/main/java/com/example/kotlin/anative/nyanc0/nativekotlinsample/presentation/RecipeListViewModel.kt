@@ -4,7 +4,6 @@ import android.arch.lifecycle.*
 import android.util.Log
 import com.example.kotlin.anative.nyanc0.nativekotlinsample.domain.model.Recipe
 import com.example.kotlin.anative.nyanc0.nativekotlinsample.domain.repository.RecipeListRepository
-import com.example.kotlin.anative.nyanc0.nativekotlinsample.presentation.common.mapper.toLiveData
 import com.example.kotlin.anative.nyanc0.nativekotlinsample.presentation.common.mapper.toResult
 import com.example.kotlin.anative.nyanc0.nativekotlinsample.util.SchedulerProvider
 import io.reactivex.disposables.CompositeDisposable
@@ -20,12 +19,13 @@ class RecipeListViewModel @Inject constructor(
     private val compositeDisposable: CompositeDisposable = CompositeDisposable()
     private val mutableRecipeList: MutableLiveData<Result<List<Recipe>>> = MutableLiveData()
     val reloadResult: LiveData<Result<List<Recipe>>> = mutableRecipeList
-    val recipeList: LiveData<Result<List<Recipe>>> by lazy {
-        recipeListRepository
-                .recipeList
-                .toResult(schedulerProvider)
-                .toLiveData()
-    }
+
+//    val recipeList: LiveData<Result<List<Recipe>>> by lazy {
+//        recipeListRepository
+//                .recipeList
+//                .toResult(schedulerProvider)
+//                .toLiveData()
+//    }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
     fun onCreate() {
