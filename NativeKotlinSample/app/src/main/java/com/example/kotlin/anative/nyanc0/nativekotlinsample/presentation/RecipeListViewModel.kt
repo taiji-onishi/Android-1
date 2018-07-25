@@ -19,8 +19,8 @@ class RecipeListViewModel @Inject constructor(
 ) : ViewModel(), LifecycleObserver {
 
     private val compositeDisposable: CompositeDisposable = CompositeDisposable()
-    private val mutableRecipeList: MutableLiveData<Result<List<Recipe>>> = MutableLiveData()
-    val reloadResult: LiveData<Result<List<Recipe>>> = mutableRecipeList
+    private val mutableRefreshState: MutableLiveData<Result<List<Recipe>>> = MutableLiveData()
+    val refreshResult: LiveData<Result<List<Recipe>>> = mutableRefreshState
 
     val recipeList: LiveData<Result<List<Recipe>>> by lazy {
         recipeListRepository
@@ -30,7 +30,7 @@ class RecipeListViewModel @Inject constructor(
     }
 
     val isLoading: LiveData<Boolean> by lazy {
-        reloadResult.map { it.inProgress }
+        recipeList.map { it.inProgress }
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
@@ -39,15 +39,24 @@ class RecipeListViewModel @Inject constructor(
         loadRecipeList()
     }
 
+    private fun loadRecipeList() =
+            recipeListRepository
+                    .getRecipeList()
+                    .toResult<List<Recipe>>(schedulerProvider)
+                    .subscribeBy(
+                            onNext = {
+                                mutableRefreshState.postValue(it) },
+                            onError = { throwable -> Log.d("NWError", throwable.message) }
+                    )
+                    .addTo(compositeDisposable)
+
+
     override fun onCleared() {
         super.onCleared()
         compositeDisposable.clear()
     }
 
-    private fun loadRecipeList() =
-            recipeListRepository.getRecipeList().toResult<List<Recipe>>(schedulerProvider)
-                    .subscribeBy(
-                            onNext = { mutableRecipeList.postValue(it) },
-                            onError = { throwable -> Log.d("NWError", throwable.message) }
-                    ).addTo(compositeDisposable)
+    fun onRetry() {
+        loadRecipeList()
+    }
 }

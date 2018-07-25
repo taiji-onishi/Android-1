@@ -5,7 +5,6 @@ import android.arch.lifecycle.ViewModelProvider
 import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -22,29 +21,31 @@ import javax.inject.Inject
 
 class RecipeListFragment : DaggerFragment() {
 
+    private lateinit var binding: FragmentRecipeListBinding
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
-    lateinit var viewModel: RecipeListViewModel
-    private lateinit var recipeListViewBinding: FragmentRecipeListBinding
     private lateinit var adapter: RecipeListAdapter
+    private val viewModel: RecipeListViewModel by lazy {
+        ViewModelProviders.of(this, viewModelFactory).get(RecipeListViewModel::class.java)
+    }
 
     companion object {
         fun newInstance(): RecipeListFragment = RecipeListFragment()
-        val TAG = RecipeListFragment::class.java.canonicalName
+        val TAG = RecipeListFragment::class.java.canonicalName!!
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        recipeListViewBinding = FragmentRecipeListBinding.inflate(layoutInflater, container, false)
-        return recipeListViewBinding.root
+        binding = FragmentRecipeListBinding.inflate(layoutInflater, container, false)
+        return binding.root
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+
         setUpRecyclerView()
-        viewModel = ViewModelProviders.of(this, viewModelFactory).get(RecipeListViewModel::class.java)
 
         val progressTimeLatch = ProgressTimeLatch {
-            recipeListViewBinding.progress.visibility = if (it) View.VISIBLE else View.GONE
+            binding.progress.visibility = if (it) View.VISIBLE else View.GONE
         }
 
         viewModel.recipeList.observe(this, Observer { result ->
@@ -53,7 +54,6 @@ class RecipeListFragment : DaggerFragment() {
                     renderView(result.data)
                 }
                 is Result.Failure -> {
-                    Log.d("NWError", result.errorMessage)
                     // TODO:エラーハンドリング
                 }
             }
@@ -63,11 +63,10 @@ class RecipeListFragment : DaggerFragment() {
             progressTimeLatch.loading = it ?: false
         })
 
-        viewModel.reloadResult.observe(this, Observer { result ->
+        viewModel.refreshResult.observe(this, Observer { result ->
             when (result) {
                 is Result.Failure -> {
                     // TODO:エラーハンドリング
-                    Log.d("NWError", result.errorMessage)
                 }
             }
         })
@@ -76,14 +75,14 @@ class RecipeListFragment : DaggerFragment() {
     }
 
     private fun setUpRecyclerView() {
-        recipeListViewBinding.recyclerView.addItemDecoration(SpaceItemDecoration(8))
-        recipeListViewBinding.recyclerView.layoutManager = LinearLayoutManager(this.context)
+        binding.recyclerView.addItemDecoration(SpaceItemDecoration(8))
+        binding.recyclerView.layoutManager = LinearLayoutManager(this.context)
     }
 
     private fun renderView(list: List<Recipe>) {
-        if (recipeListViewBinding.recyclerView.adapter == null) {
+        if (binding.recyclerView.adapter == null) {
             adapter = RecipeListAdapter((ArrayList(list)))
-            recipeListViewBinding.recyclerView.adapter = adapter
+            binding.recyclerView.adapter = adapter
         } else {
             adapter.reset(list)
         }
