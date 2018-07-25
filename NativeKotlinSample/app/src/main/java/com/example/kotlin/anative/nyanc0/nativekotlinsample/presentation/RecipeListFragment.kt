@@ -26,7 +26,7 @@ class RecipeListFragment : DaggerFragment() {
     lateinit var viewModelFactory: ViewModelProvider.Factory
     private lateinit var adapter: RecipeListAdapter
     private val viewModel: RecipeListViewModel by lazy {
-        ViewModelProviders.of(this, viewModelFactory).get(RecipeListViewModel::class.java)
+        ViewModelProviders.of(this, viewModelFactory)[RecipeListViewModel::class.java]
     }
 
     companion object {
