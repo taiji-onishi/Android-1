@@ -18,61 +18,63 @@ class _RecipeItemState extends State<RecipeItem> {
   @override
   Widget build(BuildContext context) {
     final RecipeModel _recipe = widget.recipe;
-    return new Card(
-      child: new InkWell(
-        child: new Padding(
-          padding: const EdgeInsets.all(12.0),
-          child: new Stack(
-            alignment: Alignment.center,
-            children: [
-              new Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  // Image
-                  new Container(
-                    child: new Image.network(_recipe.photoUrl),
-                  ),
-                  // recommendFlgで分岐
-                  // T: おすすめのラベルを表示、F:表示しない
-                  _recipe.recommendFlg
-                      ? Center(
-                          child: new Container(
-                            color: Colors.amber,
-                            margin: EdgeInsets.only(top: 8.0),
-                            child: new Text(
-                              _recommendedLabel,
-                              style: TextStyle(
-                                color: Colors.white,
+    return GestureDetector(
+      child: new Card(
+        child: new InkWell(
+          child: new Padding(
+            padding: const EdgeInsets.only(bottom: 12.0),
+            child: new Stack(
+              alignment: Alignment.center,
+              children: [
+                new Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    // Image
+                    new Container(
+                      child: new Image.network(_recipe.photoUrl),
+                    ),
+                    // recommendFlgで分岐
+                    // T: おすすめのラベルを表示、F:表示しない
+                    _recipe.recommendFlg
+                        ? Center(
+                            child: new Container(
+                              color: Colors.amber,
+                              margin: EdgeInsets.only(top: 8.0),
+                              child: new Text(
+                                _recommendedLabel,
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
                               ),
                             ),
+                          )
+                        : Center(),
+                    // 料理名
+                    new Center(
+                      child: new Container(
+                        padding: EdgeInsets.only(top: 8.0),
+                        child: new Text(
+                          _recipe.recipeName,
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16.0,
+                            color: Colors.red,
                           ),
-                        )
-                      : Center(),
-                  // 料理名
-                  new Center(
-                    child: new Container(
-                      padding: EdgeInsets.only(top: 8.0),
-                      child: new Text(
-                        _recipe.recipeName,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 16.0,
-                          color: Colors.red,
                         ),
                       ),
                     ),
-                  ),
-                  // 説明文言
-                  new Center(
-                    child: new Container(
-                      padding: EdgeInsets.only(top: 8.0),
-                      child: new Text(_recipe.introduction),
+                    // 説明文言
+                    new Center(
+                      child: new Container(
+                        padding: EdgeInsets.only(top: 8.0),
+                        child: new Text(_recipe.introduction),
+                      ),
                     ),
-                  ),
-                ],
-              ),
-            ],
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),
