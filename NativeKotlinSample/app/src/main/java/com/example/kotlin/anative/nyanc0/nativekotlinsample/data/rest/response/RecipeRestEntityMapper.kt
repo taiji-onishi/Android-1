@@ -31,6 +31,7 @@ fun List<RecipeRestEntity>.toRecipeDbEntityList(): List<RecipeDbEntity> = map {
 fun RecipeRestEntity.toRecipe(): Recipe =
         Recipe(
                 recipeId = RecipeId(recipeId),
+                recipeName = recipeName,
                 genre = Genre(GenreCd(genreCd), genreName),
                 introduction = introduction,
                 imageUrl = imageUrl,

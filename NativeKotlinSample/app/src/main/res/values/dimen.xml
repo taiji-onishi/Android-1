@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="space_s">4dp</dimen>
+    <dimen name="space_m">8dp</dimen>
+    <dimen name="space_l">16sp</dimen>
+
+    <dimen name="round_m">4dp</dimen>
+    <dimen name="round_l">8dp</dimen>
+
+    <dimen name="image_s">120dp</dimen>
+
+    <dimen name="text_size_xl">20sp</dimen>
+    <dimen name="text_size_l">18sp</dimen>
+    <dimen name="text_size_m">16sp</dimen>
+    <dimen name="text_size_n">14sp</dimen>
+    <dimen name="text_size_s">12sp</dimen>
+
+    <dimen name="app_bar_height">56dp</dimen>
+</resources>

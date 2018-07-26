@@ -5,6 +5,7 @@ import com.example.kotlin.anative.nyanc0.nativekotlinsample.domain.model.*
 fun RecipeDbEntity.toRecipe(): Recipe =
         Recipe(
                 recipeId = RecipeId(recipeId),
+                recipeName = recipeName,
                 genre = Genre(GenreCd(genreCd), genreName),
                 introduction = introduction,
                 imageUrl = imageUrl,

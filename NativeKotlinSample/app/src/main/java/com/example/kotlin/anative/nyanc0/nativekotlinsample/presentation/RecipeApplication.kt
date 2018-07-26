@@ -1,6 +1,8 @@
 package com.example.kotlin.anative.nyanc0.nativekotlinsample.presentation
 
 import android.support.v7.app.AppCompatDelegate
+import com.bumptech.glide.request.target.ViewTarget
+import com.example.kotlin.anative.nyanc0.nativekotlinsample.R
 import com.example.kotlin.anative.nyanc0.nativekotlinsample.di.DaggerAppComponent
 import com.example.kotlin.anative.nyanc0.nativekotlinsample.di.DbModule
 import com.example.kotlin.anative.nyanc0.nativekotlinsample.di.NetworkModule
@@ -11,6 +13,7 @@ open class RecipeApplication : DaggerApplication() {
     override fun onCreate() {
         super.onCreate()
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true)
+        ViewTarget.setTagId(R.id.glide_tag)
     }
 
     override fun applicationInjector(): AndroidInjector<out DaggerApplication> {
