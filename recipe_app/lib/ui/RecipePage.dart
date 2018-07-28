@@ -5,6 +5,10 @@ import 'package:recipe_app/repository/RecipeRepository.dart';
 import 'package:recipe_app/ui/RecipeItem.dart';
 
 class RecipePage extends StatefulWidget {
+  final bool recommendedFlag;
+
+  const RecipePage({Key key, this.recommendedFlag}) : super(key: key);
+
   @override
   AllRecipePageState createState() => new AllRecipePageState();
 }
@@ -19,19 +23,15 @@ class AllRecipePageState extends State<RecipePage> {
     _loadingInProgress = true;
     new RecipeRepository(new RecipeApi())
         .findAll()
-        .then((recipe) => setRecipe(recipe));
+        .then((recipe) => _setRecipe(recipe, widget.recommendedFlag));
   }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Recipe App",
       home: Scaffold(
-          appBar: AppBar(
-            backgroundColor: Colors.red,
-            title: Text("Recipe App"),
-          ),
-          body: _buildBody()),
+        body: _buildBody(),
+      ),
     );
   }
 
@@ -51,10 +51,18 @@ class AllRecipePageState extends State<RecipePage> {
     }
   }
 
-  void setRecipe(List<RecipeModel> recipes) {
+  void _setRecipe(List<RecipeModel> recipes, bool recommendedFlag) {
     setState(() {
-      _items = recipes;
+      _items = recommendedFlag ? _createRecommendList(recipes) : recipes;
       _loadingInProgress = recipes.isEmpty;
     });
+  }
+
+  List<RecipeModel> _createRecommendList(List<RecipeModel> list) {
+    List<RecipeModel> result = [];
+    for (RecipeModel item in list) {
+      if (item.recommendFlg) result.add(item);
+    }
+    return result;
   }
 }

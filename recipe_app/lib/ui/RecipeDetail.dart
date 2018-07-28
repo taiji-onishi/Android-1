@@ -15,7 +15,7 @@ class RecipeDetail extends StatefulWidget {
 class RecipeDetailState extends State<RecipeDetail> {
   @override
   Widget build(BuildContext context) {
-    RecipeModel recipeModel = widget.recipe;
+    RecipeModel _recipeModel = widget.recipe;
     return MaterialApp(
       title: "Recipe App",
       home: Scaffold(
@@ -24,7 +24,7 @@ class RecipeDetailState extends State<RecipeDetail> {
             title: Text("Recipe App"),
           ),
           body: new Center(
-            child: new Image.network(recipeModel.photoUrl),
+            child: new Image.network(_recipeModel.photoUrl),
           ),
       ),
     );
