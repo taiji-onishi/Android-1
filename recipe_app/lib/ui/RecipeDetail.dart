@@ -16,16 +16,13 @@ class RecipeDetailState extends State<RecipeDetail> {
   @override
   Widget build(BuildContext context) {
     RecipeModel _recipeModel = widget.recipe;
-    return MaterialApp(
-      title: "Recipe App",
-      home: Scaffold(
-          appBar: AppBar(
-            backgroundColor: Colors.red,
-            title: Text("Recipe App"),
-          ),
-          body: new Center(
-            child: new Image.network(_recipeModel.photoUrl),
-          ),
+    return new Scaffold(
+      appBar: new AppBar(
+        backgroundColor: Colors.red,
+        title: Text(_recipeModel.recipeName),
+      ),
+      body: new Container(
+        child: new Image.network(_recipeModel.photoUrl),
       ),
     );
   }

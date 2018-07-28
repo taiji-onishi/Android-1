@@ -28,14 +28,6 @@ class AllRecipePageState extends State<RecipePage> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        body: _buildBody(),
-      ),
-    );
-  }
-
-  Widget _buildBody() {
     if (_loadingInProgress) {
       return new Center(
         child: new CircularProgressIndicator(),
