@@ -13,4 +13,10 @@ class RecipeRepository {
       return recipe.values.toList();
     });
   }
+
+  Future<RecipeModel> find(String id) {
+    return _recipeApi.getRecipe().then((recipe) {
+      return recipe[id];
+    });
+  }
 }

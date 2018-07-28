@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:recipe_app/model/RecipeModel.dart';
+import 'package:recipe_app/ui/RecipeDetail.dart';
 
 class RecipeItem extends StatefulWidget {
   const RecipeItem({Key key, @required this.recipe})
@@ -21,6 +22,9 @@ class _RecipeItemState extends State<RecipeItem> {
     return GestureDetector(
       child: new Card(
         child: new InkWell(
+          onTap: (){
+            moveToDetail(_recipe);
+          },
           child: new Padding(
             padding: const EdgeInsets.only(bottom: 12.0),
             child: new Stack(
@@ -79,5 +83,11 @@ class _RecipeItemState extends State<RecipeItem> {
         ),
       ),
     );
+  }
+
+  void moveToDetail(RecipeModel recipe) {
+    Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
+      return new RecipeDetail(recipe: recipe);
+    }));
   }
 }
