@@ -17,5 +17,9 @@ data class RecipeRestEntity(
         @Json(name = "main_gazo")
         var imageUrl: String,
         @Json(name = "recommended_flg")
-        var recommendFlg: Int
+        var recommendFlg: Int,
+        @Json(name = "cooking_ingredients")
+        var cookingIngredientsList: List<CookingIngredientsRestEntity>,
+        @Json(name = "cooking_method")
+        var cookingMethodList: List<CookingMethodRestEntity>
 )

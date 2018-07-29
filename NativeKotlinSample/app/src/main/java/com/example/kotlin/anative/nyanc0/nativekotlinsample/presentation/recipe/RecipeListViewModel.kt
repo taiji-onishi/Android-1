@@ -1,9 +1,10 @@
-package com.example.kotlin.anative.nyanc0.nativekotlinsample.presentation
+package com.example.kotlin.anative.nyanc0.nativekotlinsample.presentation.recipe
 
 import android.arch.lifecycle.*
 import android.util.Log
 import com.example.kotlin.anative.nyanc0.nativekotlinsample.domain.model.Recipe
 import com.example.kotlin.anative.nyanc0.nativekotlinsample.domain.repository.RecipeListRepository
+import com.example.kotlin.anative.nyanc0.nativekotlinsample.presentation.Result
 import com.example.kotlin.anative.nyanc0.nativekotlinsample.presentation.common.mapper.map
 import com.example.kotlin.anative.nyanc0.nativekotlinsample.presentation.common.mapper.toLiveData
 import com.example.kotlin.anative.nyanc0.nativekotlinsample.presentation.common.mapper.toResult

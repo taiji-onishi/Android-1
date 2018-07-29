@@ -2,7 +2,7 @@ package com.example.kotlin.anative.nyanc0.nativekotlinsample.di
 
 import android.arch.lifecycle.ViewModel
 import android.arch.lifecycle.ViewModelProvider
-import com.example.kotlin.anative.nyanc0.nativekotlinsample.presentation.RecipeListViewModel
+import com.example.kotlin.anative.nyanc0.nativekotlinsample.presentation.recipe.RecipeListViewModel
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap

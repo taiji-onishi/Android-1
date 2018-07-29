@@ -1,4 +1,4 @@
-package com.example.kotlin.anative.nyanc0.nativekotlinsample.presentation
+package com.example.kotlin.anative.nyanc0.nativekotlinsample.presentation.recipe
 
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProvider
@@ -12,14 +12,16 @@ import com.example.kotlin.anative.nyanc0.nativekotlinsample.R
 import com.example.kotlin.anative.nyanc0.nativekotlinsample.databinding.FragmentRecipeListBinding
 import com.example.kotlin.anative.nyanc0.nativekotlinsample.databinding.ItemRecipeBinding
 import com.example.kotlin.anative.nyanc0.nativekotlinsample.domain.model.Recipe
+import com.example.kotlin.anative.nyanc0.nativekotlinsample.presentation.Result
 import com.example.kotlin.anative.nyanc0.nativekotlinsample.presentation.common.binding.BindingHolder
 import com.example.kotlin.anative.nyanc0.nativekotlinsample.presentation.common.view.ArrayRecyclerAdapter
+import com.example.kotlin.anative.nyanc0.nativekotlinsample.presentation.common.view.Findable
 import com.example.kotlin.anative.nyanc0.nativekotlinsample.presentation.common.view.SpaceItemDecoration
 import com.example.kotlin.anative.nyanc0.nativekotlinsample.util.ProgressTimeLatch
 import dagger.android.support.DaggerFragment
 import javax.inject.Inject
 
-class RecipeListFragment : DaggerFragment() {
+class RecipeListFragment : DaggerFragment(), Findable {
 
     private lateinit var binding: FragmentRecipeListBinding
     @Inject
@@ -73,6 +75,9 @@ class RecipeListFragment : DaggerFragment() {
 
         lifecycle.addObserver(viewModel)
     }
+
+    override val tagForFinding: String
+        get() = TAG
 
     private fun setUpRecyclerView() {
         binding.recyclerView.addItemDecoration(SpaceItemDecoration(8))

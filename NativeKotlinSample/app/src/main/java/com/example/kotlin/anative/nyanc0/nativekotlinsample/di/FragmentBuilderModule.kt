@@ -1,6 +1,6 @@
 package com.example.kotlin.anative.nyanc0.nativekotlinsample.di
 
-import com.example.kotlin.anative.nyanc0.nativekotlinsample.presentation.RecipeListFragment
+import com.example.kotlin.anative.nyanc0.nativekotlinsample.presentation.recipe.RecipeListFragment
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 

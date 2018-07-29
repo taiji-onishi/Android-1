@@ -35,7 +35,9 @@ fun RecipeRestEntity.toRecipe(): Recipe =
                 genre = Genre(GenreCd(genreCd), genreName),
                 introduction = introduction,
                 imageUrl = imageUrl,
-                recommendFlg = RecommendFlg(recommendFlg)
+                recommendFlg = RecommendFlg(recommendFlg),
+                ingredients = cookingIngredientsList.toCookingIngredientsList(),
+                cookingMethod = cookingMethodList.toCookingMethodList()
         )
 
 /**
@@ -43,4 +45,12 @@ fun RecipeRestEntity.toRecipe(): Recipe =
  */
 fun List<RecipeRestEntity>.toRecipeList(): List<Recipe> = map {
     it.toRecipe()
+}
+
+fun List<CookingIngredientsRestEntity>.toCookingIngredientsList(): List<CookingIngredients> = map {
+    CookingIngredients(it.material, it.quantity)
+}
+
+fun List<CookingMethodRestEntity>.toCookingMethodList(): List<CookingMethod> = map {
+    CookingMethod(it.procedure_no, it.procedure)
 }

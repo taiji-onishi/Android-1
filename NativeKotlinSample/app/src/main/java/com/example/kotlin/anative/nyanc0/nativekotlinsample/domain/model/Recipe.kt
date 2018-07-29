@@ -6,5 +6,7 @@ data class Recipe(
         val genre: Genre,
         val introduction: String,
         val imageUrl: String,
-        val recommendFlg: RecommendFlg
+        val recommendFlg: RecommendFlg,
+        val ingredients: List<CookingIngredients>,
+        val cookingMethod: List<CookingMethod>
 )

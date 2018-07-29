@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="recipe"
+            type="com.example.kotlin.anative.nyanc0.nativekotlinsample.domain.model.Recipe" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.example.kotlin.anative.nyanc0.nativekotlinsample.presentation.common.view.LoadingImageView
+            android:id="@+id/main_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="300dp"
+            app:loadImage='@{recipe.imageUrl}' />
+
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>
