@@ -12,6 +12,7 @@ import com.example.kotlin.anative.nyanc0.nativekotlinsample.R
 import com.example.kotlin.anative.nyanc0.nativekotlinsample.databinding.FragmentRecipeListBinding
 import com.example.kotlin.anative.nyanc0.nativekotlinsample.databinding.ItemRecipeBinding
 import com.example.kotlin.anative.nyanc0.nativekotlinsample.domain.model.Recipe
+import com.example.kotlin.anative.nyanc0.nativekotlinsample.presentation.NavigationController
 import com.example.kotlin.anative.nyanc0.nativekotlinsample.presentation.Result
 import com.example.kotlin.anative.nyanc0.nativekotlinsample.presentation.common.binding.BindingHolder
 import com.example.kotlin.anative.nyanc0.nativekotlinsample.presentation.common.view.ArrayRecyclerAdapter
@@ -26,6 +27,8 @@ class RecipeListFragment : DaggerFragment(), Findable {
     private lateinit var binding: FragmentRecipeListBinding
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
+    @Inject
+    lateinit var navigationController: NavigationController
     private lateinit var adapter: RecipeListAdapter
     private val viewModel: RecipeListViewModel by lazy {
         ViewModelProviders.of(this, viewModelFactory)[RecipeListViewModel::class.java]
@@ -87,6 +90,11 @@ class RecipeListFragment : DaggerFragment(), Findable {
     private fun renderView(list: List<Recipe>) {
         if (binding.recyclerView.adapter == null) {
             adapter = RecipeListAdapter((ArrayList(list)))
+            adapter.setOnItemClickListener(object : ArrayRecyclerAdapter.OnItemClickedListener<Recipe> {
+                override fun onItemClicked(view: View, data: Recipe) {
+                    navigationController.navigateToDetail(data.recipeId)
+                }
+            })
             binding.recyclerView.adapter = adapter
         } else {
             adapter.reset(list)
@@ -103,6 +111,7 @@ class RecipeListFragment : DaggerFragment(), Findable {
         override fun onBindViewHolder(holder: BindingHolder<ItemRecipeBinding>, position: Int) {
             val data = list[position]
             holder.binding!!.recipe = data
+            holder.binding.root.setOnClickListener({ listener.onItemClicked(it, data) })
         }
     }
 }

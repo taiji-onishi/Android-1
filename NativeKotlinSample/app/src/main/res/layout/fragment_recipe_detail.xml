@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tool="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -10,22 +10,85 @@
         <variable
             name="recipe"
             type="com.example.kotlin.anative.nyanc0.nativekotlinsample.domain.model.Recipe" />
+
+        <variable
+            name="ingredient"
+            type="com.example.kotlin.anative.nyanc0.nativekotlinsample.domain.model.CookingIngredients" />
+
+        <variable
+            name="method"
+            type="com.example.kotlin.anative.nyanc0.nativekotlinsample.domain.model.CookingMethod" />
     </data>
 
-    <android.support.constraint.ConstraintLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
-        <com.example.kotlin.anative.nyanc0.nativekotlinsample.presentation.common.view.LoadingImageView
-            android:id="@+id/main_image"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minHeight="300dp"
-            app:loadImage='@{recipe.imageUrl}' />
+            android:layout_height="match_parent">
 
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/tags_constraint_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipChildren="false">
 
+                <com.example.kotlin.anative.nyanc0.nativekotlinsample.presentation.common.view.LoadingImageView
+                    android:id="@+id/main_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="300dp" />
 
-    </android.support.constraint.ConstraintLayout>
+                <TextView
+                    android:id="@+id/ingredient_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_m"
+                    android:drawablePadding="@dimen/space_s"
+                    android:drawableStart="@drawable/ic_spoon"
+                    android:gravity="center_vertical"
+                    android:text="@string/label_cooking_ingredients"
+                    android:textSize="@dimen/text_size_m"
+                    app:layout_constraintTop_toBottomOf="@+id/main_image" />
+
+                <LinearLayout
+                    android:id="@+id/ingredient_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@+id/ingredient_label" />
+
+                <TextView
+                    android:id="@+id/cooking_method_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_m"
+                    android:drawablePadding="@dimen/space_s"
+                    android:drawableStart="@drawable/ic_cooking"
+                    android:gravity="center_vertical"
+                    android:text="@string/label_cooking_method"
+                    android:textSize="@dimen/text_size_m"
+                    app:layout_constraintTop_toBottomOf="@+id/ingredient_container" />
+
+                <LinearLayout
+                    android:id="@+id/method_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@+id/cooking_method_label" />
+
+            </android.support.constraint.ConstraintLayout>
+        </ScrollView>
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            tools:visibility="visible" />
+    </FrameLayout>
+
 
 </layout>

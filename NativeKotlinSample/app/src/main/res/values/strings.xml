@@ -3,5 +3,5 @@
     <string name="label_recommend">おすすめ</string>
     <string name="label_recipe_list">レシピ一覧</string>
     <string name="label_cooking_ingredients">材料</string>
-
+    <string name="label_cooking_method">手順</string>
 </resources>

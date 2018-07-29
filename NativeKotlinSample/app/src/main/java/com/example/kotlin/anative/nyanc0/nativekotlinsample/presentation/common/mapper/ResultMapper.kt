@@ -9,6 +9,7 @@ import com.example.kotlin.anative.nyanc0.nativekotlinsample.util.SchedulerProvid
 import io.reactivex.Completable
 import io.reactivex.Flowable
 import io.reactivex.Observable
+import io.reactivex.Single
 import org.reactivestreams.Publisher
 
 @CheckResult
@@ -40,6 +41,11 @@ fun <T> Observable<T>.toResult(schedulerProvider: SchedulerProvider):
 fun <T> Completable.toResult(schedulerProvider: SchedulerProvider):
         Observable<Result<T>> {
     return toObservable<T>().toResult(schedulerProvider)
+}
+
+@CheckResult
+fun <T> Single<T>.toResult(schedulerProvider: SchedulerProvider): Observable<Result<T>> {
+    return toObservable().toResult(schedulerProvider)
 }
 
 fun <T> Publisher<T>.toLiveData() = LiveDataReactiveStreams.fromPublisher(this) as LiveData<T>

@@ -19,7 +19,7 @@ data class RecipeRestEntity(
         @Json(name = "recommended_flg")
         var recommendFlg: Int,
         @Json(name = "cooking_ingredients")
-        var cookingIngredientsList: List<CookingIngredientsRestEntity>,
+        var cookingIngredientsList: List<CookingIngredientsRestEntity> = listOf(),
         @Json(name = "cooking_method")
-        var cookingMethodList: List<CookingMethodRestEntity>
+        var cookingMethodList: List<CookingMethodRestEntity> = listOf()
 )

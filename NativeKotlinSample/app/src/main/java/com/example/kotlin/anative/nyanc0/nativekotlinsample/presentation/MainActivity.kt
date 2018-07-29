@@ -22,17 +22,12 @@ class MainActivity : DaggerAppCompatActivity() {
         initFragment()
     }
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+        navigationController.backstackFragment()
+    }
+
     private fun initFragment() {
         navigationController.navigateToRecipeList()
-//        val manager = supportFragmentManager
-//        var tagsFragment = manager.findFragmentByTag(RecipeListFragment.TAG)
-//
-//        if (tagsFragment == null) {
-//            tagsFragment = RecipeListFragment.newInstance()
-//        }
-//
-//        val transaction = supportFragmentManager.beginTransaction()
-//        transaction.add(R.id.container, tagsFragment, RecipeListFragment.TAG)
-//        transaction.commit()
     }
 }

@@ -15,5 +15,5 @@ interface RecipeApi {
 
     @GET("/recipe")
     @CheckResult
-    fun getRecipe(@Query("recipe_id") recipeId: String): Single<RecipeRestEntity>
+    fun getRecipe(@Query("recipe_id") recipeId: String): Single<List<RecipeRestEntity>>
 }

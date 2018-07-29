@@ -15,8 +15,13 @@ class RecipeRepositoryImpl @Inject constructor(
 ) : RecipeRepository {
     override fun getRecipe(recipeId: RecipeId): Single<Recipe> {
         return recipeApi.getRecipe(recipeId.value)
-                .map { it ->
-                    it.toRecipe()
+                .map {
+                    val recipeEntity = it.get(0)
+                    recipeEntity.toRecipe()
                 }.subscribeOn(schedulerProvider.io())
+
+//                .map { it ->
+//                    it.toRecipe()
+//                }.subscribeOn(schedulerProvider.io())
     }
 }

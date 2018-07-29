@@ -2,9 +2,12 @@ package com.example.kotlin.anative.nyanc0.nativekotlinsample.presentation.common
 
 import android.support.annotation.UiThread
 import android.support.v7.widget.RecyclerView
+import android.view.View
 
 abstract class ArrayRecyclerAdapter<T, VH : RecyclerView.ViewHolder>
 constructor(var list: ArrayList<T>) : RecyclerView.Adapter<VH>() {
+
+    lateinit var listener: OnItemClickedListener<T>
 
     @UiThread
     fun reset(items: Collection<T>) {
@@ -44,4 +47,11 @@ constructor(var list: ArrayList<T>) : RecyclerView.Adapter<VH>() {
         return list.size
     }
 
+    fun setOnItemClickListener(listener: OnItemClickedListener<T>) {
+        this.listener = listener
+    }
+
+    interface OnItemClickedListener<in T> {
+        fun onItemClicked(view: View, data: T)
+    }
 }

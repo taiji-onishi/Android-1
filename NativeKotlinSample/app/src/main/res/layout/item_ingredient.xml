@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="ingredient"
+            type="com.example.kotlin.anative.nyanc0.nativekotlinsample.domain.model.CookingIngredients" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space_s">
+
+        <TextView
+            android:id="@+id/text_material"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@color/bg"
+            android:padding="@dimen/space_s"
+            android:text="@{ingredient.material}"
+            android:textSize="@dimen/text_size_m"
+            app:layout_constraintEnd_toStartOf="@+id/text_quantity"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="卵" />
+
+        <TextView
+            android:id="@+id/text_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_s"
+            android:padding="@dimen/space_s"
+            android:text="@{ingredient.quantity}"
+            android:textSize="@dimen/text_size_m"
+            app:layout_constraintStart_toEndOf="@+id/text_material"
+            tools:text="4個" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

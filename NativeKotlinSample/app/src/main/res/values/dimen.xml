@@ -8,7 +8,7 @@
     <dimen name="round_m">4dp</dimen>
     <dimen name="round_l">8dp</dimen>
 
-    <dimen name="image_s">120dp</dimen>
+    <dimen name="image_s">32dp</dimen>
 
     <dimen name="text_size_xl">20sp</dimen>
     <dimen name="text_size_l">18sp</dimen>
