@@ -2,6 +2,8 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
+import 'package:recipe_app/model/CookingMethod.dart';
+import 'package:recipe_app/model/Ingredients.dart';
 import 'package:recipe_app/model/RecipeModel.dart';
 
 class RecipeApi {
@@ -21,11 +23,10 @@ class RecipeApi {
   _request() async {
     var response = await http.get(_api_path);
     var data = json.decode(response.body);
-    Map itemMap = new Map<String, RecipeModel>();
 
+    // recipe
     for (var item in data) {
-      itemMap[item['recipe_id']] = RecipeModel.fromJson(item);
+      _recipeMap[item['recipe_id']] = RecipeModel.fromJson(item);
     }
-    _recipeMap = itemMap;
   }
 }
