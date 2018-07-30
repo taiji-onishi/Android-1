@@ -41,6 +41,10 @@ class RecipeDetailFragment : DaggerFragment(), Findable {
             binding.progress.visibility = if (it) View.VISIBLE else View.GONE
         }
 
+        viewModel.isLoading.observe(this, Observer {
+            progressTimeLatch.loading = it ?: false
+        })
+
         viewModel.recipe.observe(this, Observer {
             when (it) {
                 is Result.Success -> {
@@ -53,10 +57,6 @@ class RecipeDetailFragment : DaggerFragment(), Findable {
                     Log.d("TEST", it.errorMessage)
                 }
             }
-        })
-
-        viewModel.isLoading.observe(this, Observer {
-            progressTimeLatch.loading = it ?: false
         })
 
         lifecycle.addObserver(viewModel)

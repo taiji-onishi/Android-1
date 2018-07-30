@@ -1,7 +1,8 @@
 package com.example.kotlin.anative.nyanc0.nativekotlinsample.di
 
 import android.app.Application
-import com.example.kotlin.anative.nyanc0.nativekotlinsample.di.activity.MainActivityModule
+import com.example.kotlin.anative.nyanc0.nativekotlinsample.di.activity.DetailActivityBuilder
+import com.example.kotlin.anative.nyanc0.nativekotlinsample.di.activity.MainActivityBuilder
 import com.example.kotlin.anative.nyanc0.nativekotlinsample.presentation.RecipeApplication
 import dagger.BindsInstance
 import dagger.Component
@@ -15,7 +16,9 @@ import javax.inject.Singleton
     AppModule::class,
     NetworkModule::class,
     DbModule::class,
-    MainActivityModule::class])
+    ViewModelModule::class,
+    MainActivityBuilder::class,
+    DetailActivityBuilder::class])
 interface AppComponent : AndroidInjector<RecipeApplication> {
     @Component.Builder
     interface Builder {

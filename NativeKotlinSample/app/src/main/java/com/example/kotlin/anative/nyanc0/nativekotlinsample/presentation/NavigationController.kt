@@ -7,8 +7,8 @@ import android.util.Log
 import com.example.kotlin.anative.nyanc0.nativekotlinsample.R
 import com.example.kotlin.anative.nyanc0.nativekotlinsample.domain.model.RecipeId
 import com.example.kotlin.anative.nyanc0.nativekotlinsample.presentation.common.view.Findable
+import com.example.kotlin.anative.nyanc0.nativekotlinsample.presentation.recipe.DetailActivity
 import com.example.kotlin.anative.nyanc0.nativekotlinsample.presentation.recipe.RecipeDetailFragment
-import com.example.kotlin.anative.nyanc0.nativekotlinsample.presentation.recipe.RecipeListFragment
 import javax.inject.Inject
 
 class NavigationController @Inject constructor(private val activity: AppCompatActivity) {
@@ -20,8 +20,8 @@ class NavigationController @Inject constructor(private val activity: AppCompatAc
         replaceFragment(RecipeDetailFragment.newInstance(recipeId))
     }
 
-    fun navigateToRecipeList() {
-        replaceFragment(RecipeListFragment.newInstance())
+    fun navigateToDetailActivity(recipeId: RecipeId) {
+        DetailActivity.startActivity(activity, recipeId)
     }
 
     private fun replaceFragment(fragment: Fragment) {

@@ -5,6 +5,7 @@ import android.arch.lifecycle.ViewModelProvider
 import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,7 +20,8 @@ import com.example.kotlin.anative.nyanc0.nativekotlinsample.util.ProgressTimeLat
 import dagger.android.support.DaggerFragment
 import javax.inject.Inject
 
-class RecipeListFragment : DaggerFragment(), Findable {
+class RecommendListFragment : DaggerFragment(), Findable {
+
 
     private lateinit var binding: FragmentRecipeListBinding
     @Inject
@@ -27,13 +29,13 @@ class RecipeListFragment : DaggerFragment(), Findable {
     @Inject
     lateinit var navigationController: NavigationController
     private lateinit var adapter: RecipeListAdapter
-    private val viewModel: RecipeListViewModel by lazy {
-        ViewModelProviders.of(this, viewModelFactory)[RecipeListViewModel::class.java]
+    private val viewModel: RecommendListViewModel by lazy {
+        ViewModelProviders.of(this, viewModelFactory)[RecommendListViewModel::class.java]
     }
 
     companion object {
-        fun newInstance(): RecipeListFragment = RecipeListFragment()
-        val TAG = RecipeListFragment::class.java.canonicalName!!
+        fun newInstance(): RecommendListFragment = RecommendListFragment()
+        val TAG = RecommendListFragment::class.java.canonicalName!!
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
@@ -50,34 +52,23 @@ class RecipeListFragment : DaggerFragment(), Findable {
             binding.progress.visibility = if (it) View.VISIBLE else View.GONE
         }
 
-        viewModel.recipeList.observe(this, Observer { result ->
-            when (result) {
-                is Result.Success -> {
-                    renderView(result.data)
-                }
-                is Result.Failure -> {
-                    // TODO:エラーハンドリング
-                }
-            }
-        })
-
         viewModel.isLoading.observe(this, Observer {
             progressTimeLatch.loading = it ?: false
         })
 
-        viewModel.refreshResult.observe(this, Observer { result ->
-            when (result) {
+        viewModel.recipe.observe(this, Observer {
+            when (it) {
+                is Result.Success -> {
+                    renderView(it.data)
+                }
                 is Result.Failure -> {
-                    // TODO:エラーハンドリング
+                    Log.d("TEST", it.errorMessage)
                 }
             }
         })
 
         lifecycle.addObserver(viewModel)
     }
-
-    override val tagForFinding: String
-        get() = TAG
 
     private fun setUpRecyclerView() {
         binding.recyclerView.addItemDecoration(SpaceItemDecoration(8))
@@ -97,4 +88,7 @@ class RecipeListFragment : DaggerFragment(), Findable {
             adapter.reset(list)
         }
     }
+
+    override val tagForFinding: String
+        get() = TAG
 }
