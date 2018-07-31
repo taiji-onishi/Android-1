@@ -30,9 +30,9 @@
                     android:id="@+id/tab_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/white"
-                    app:tabSelectedTextColor="@color/colorPrimary"
-                    app:tabTextColor="@color/colorTextSecondary" />
+                    android:background="@color/colorPrimary"
+                    app:tabSelectedTextColor="@color/colorAccent"
+                    app:tabTextColor="@color/white" />
             </android.support.design.widget.AppBarLayout>
 
             <android.support.v4.view.ViewPager
