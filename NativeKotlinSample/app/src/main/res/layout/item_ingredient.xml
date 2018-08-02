@@ -12,33 +12,34 @@
             type="com.example.kotlin.anative.nyanc0.nativekotlinsample.domain.model.CookingIngredients" />
     </data>
 
-    <android.support.constraint.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
         android:padding="@dimen/space_s">
 
         <TextView
             android:id="@+id/text_material"
-            android:layout_width="100dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="@color/bg"
+            android:layout_weight="1"
             android:padding="@dimen/space_s"
             android:text="@{ingredient.material}"
             android:textSize="@dimen/text_size_m"
-            app:layout_constraintEnd_toStartOf="@+id/text_quantity"
-            app:layout_constraintStart_toStartOf="parent"
             tools:text="卵" />
 
         <TextView
             android:id="@+id/text_quantity"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/space_s"
+            android:layout_weight="1"
+            android:gravity="end"
             android:padding="@dimen/space_s"
             android:text="@{ingredient.quantity}"
             android:textSize="@dimen/text_size_m"
-            app:layout_constraintStart_toEndOf="@+id/text_material"
             tools:text="4個" />
 
-    </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
 </layout>

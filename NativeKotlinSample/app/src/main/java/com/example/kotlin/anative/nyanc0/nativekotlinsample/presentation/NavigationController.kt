@@ -20,8 +20,8 @@ class NavigationController @Inject constructor(private val activity: AppCompatAc
         replaceFragment(RecipeDetailFragment.newInstance(recipeId))
     }
 
-    fun navigateToDetailActivity(recipeId: RecipeId) {
-        DetailActivity.startActivity(activity, recipeId)
+    fun navigateToDetailActivity(recipeId: RecipeId, recipeName: String) {
+        DetailActivity.startActivity(activity, recipeId, recipeName)
     }
 
     private fun replaceFragment(fragment: Fragment) {

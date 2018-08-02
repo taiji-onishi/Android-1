@@ -80,7 +80,7 @@ class RecommendListFragment : DaggerFragment(), Findable {
             adapter = RecipeListAdapter((ArrayList(list)))
             adapter.setOnItemClickListener(object : ArrayRecyclerAdapter.OnItemClickedListener<Recipe> {
                 override fun onItemClicked(view: View, data: Recipe) {
-                    navigationController.navigateToDetailActivity(data.recipeId)
+                    navigationController.navigateToDetailActivity(data.recipeId, data.recipeName)
                 }
             })
             binding.recyclerView.adapter = adapter

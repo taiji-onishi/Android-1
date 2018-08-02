@@ -49,7 +49,7 @@ class RecipeDetailFragment : DaggerFragment(), Findable {
             when (it) {
                 is Result.Success -> {
                     val recipe = it.data
-                    binding.mainImage.load(recipe.imageUrl)
+                    binding.recipe = recipe
                     bindIngredient(recipe.ingredients)
                     bindMethod(recipe.cookingMethod)
                 }
