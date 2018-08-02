@@ -52,6 +52,3 @@ fun <T> Publisher<T>.toLiveData() = LiveDataReactiveStreams.fromPublisher(this) 
 
 inline fun <X, Y> LiveData<X>.map(crossinline transformer: (X) -> Y): LiveData<Y> =
         Transformations.map(this, { transformer(it) })
-
-inline fun <X, Y> LiveData<X>.switchMap(crossinline transformer: (X) -> LiveData<Y>): LiveData<Y> =
-        Transformations.switchMap(this, { transformer(it) })
