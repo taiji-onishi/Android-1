@@ -11,11 +11,11 @@
 ### 学習内容一覧
 - Rxjava
   - [資料](https://github.com/nyanc0/Android/wiki/doc_RxJava)
-  - [課題](https://github.com/nyanc0/Android/wiki/ex_Rxjava)
+  - [課題](https://github.com/nyanc0/Android/tree/exercise/android_knowledge/rxjava)
 
 - DI/Dagger
   - [資料](https://github.com/nyanc0/Android/wiki/doc_DI_Dagger)
-  - [課題](https://github.com/nyanc0/Android/wiki/ex_DI_Dagger)
+  - [課題](https://github.com/nyanc0/Android/tree/exercise/android_knowledge/dagger)
 
 ### SampleAppについて
 SampleAppは各項目の学習を目的としたアプリです。  
