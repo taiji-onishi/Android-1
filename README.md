@@ -21,5 +21,4 @@
 SampleAppは各項目の学習を目的としたアプリです。  
 利用ルールと仕様は下記を参照してください。
 
-- [利用ルール](https://github.com/nyanc0/Android/wiki#sampleappの利用ルール)
-- [アプリ仕様](https://github.com/nyanc0/Android/wiki#sampleappの仕様)
+- [SampleAppについて](https://github.com/nyanc0/Android/wiki/SampleAppについて)
