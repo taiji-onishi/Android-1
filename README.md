@@ -5,9 +5,8 @@
 ## Android勉強会
 ### 構成
 - 基本的に学習項目に対して資料+課題で構成されています。
-- 課題受講する場合は、「excercises/各項目内容名ブランチ」から個別にブランチを切ってください。  
-例)practice/hogehoge/rxjava　※hogehogeにはユーザー名を記載
-- **「excercises/各項目内容名ブランチ」に勝手にマージしないでください！！**
+- 課題受講する場合は、「excercise/android_knowledge/各項目内容名ブランチ」から、各個人でブランチを切ってください。  
+- **「excercise/android_knowledge/各項目内容名ブランチ」に勝手にマージしないでください！！**
 
 ### 学習内容一覧
 - Rxjava
