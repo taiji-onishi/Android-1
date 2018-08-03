@@ -5,13 +5,11 @@
 - [Flutter環境構築](https://qiita.com/mkosuke/items/7957e71968aefc6558be)
 
 ## アプリ内容
-- 一覧
-![native_vs_flutter_list](https://github.com/nyanc0/Android/blob/image/gifs/native_vs_flutter_list.gif)
-
+- 全一覧 + おすすめ一覧 with Pager
 - 詳細
-![native_vs_flutter_detail](https://github.com/nyanc0/Android/blob/image/gifs/native_vs_flutter_detail.gif)
 
-- 一覧 + おすすめ
+![native_vs_flutter_list](https://github.com/nyanc0/Android/blob/image/gifs/native_vs_flutter_list.gif)
+![native_vs_flutter_detail](https://github.com/nyanc0/Android/blob/image/gifs/native_vs_flutter_detail.gif)
 ![native_vs_flutter_pager](https://github.com/nyanc0/Android/blob/image/gifs/native_vs_flutter_pager.gif)
 
 ## 注意事項
