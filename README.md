@@ -4,9 +4,14 @@
 - [レシピAPI仕様書](https://github.com/nyanc0/Android/wiki/レシピAPI仕様書)
 
 ## アプリ内容
-- レシピ一覧
-- おすすめレシピ一覧
-- レシピ詳細
+- 一覧  
+![native_vs_flutter_list](https://github.com/nyanc0/Android/blob/image/gifs/native_vs_flutter_list.gif)
+
+- 詳細  
+![native_vs_flutter_detail](https://github.com/nyanc0/Android/blob/image/gifs/native_vs_flutter_detail.gif)
+
+- 一覧 + おすすめ  
+![native_vs_flutter_pager](https://github.com/nyanc0/Android/blob/image/gifs/native_vs_flutter_pager.gif)
 
 ## 注意事項
 - 発表資料用なので作りは割と適当。
