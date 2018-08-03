@@ -12,11 +12,6 @@
 ![native_vs_flutter_detail](https://github.com/nyanc0/Android/blob/image/gifs/native_vs_flutter_detail.gif)
 ![native_vs_flutter_pager](https://github.com/nyanc0/Android/blob/image/gifs/native_vs_flutter_pager.gif)
 
-## 注意事項
-- 発表資料用なので作りは割と適当。
-- 時間がなかったので、作りはDroidKaigi2018のアプリを参考にしました。
-- 見た目には凝ってないのでマテリアル化されてない＆xml綺麗じゃないです。
-
 ## NativeKotlinSample
 - Kotlin + DI + AAC
 
@@ -28,6 +23,11 @@
 - Glide
 - RxJava
 - AAC
+
+### 注意事項
+- 発表資料用なので作りは割と適当。
+- 時間がなかったので、作りはDroidKaigi2018のアプリを参考にしました。
+- 見た目には凝ってないのでマテリアル化されてない＆xml綺麗じゃないです。
 
 ## recipe_app
 - Flutter
