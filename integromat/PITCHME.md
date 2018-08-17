@@ -31,7 +31,7 @@
 
 ## 例えば...
 
-![what_is_integromat](images/what_is_integromat.png)
+![what_is_integromat](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/what_is_integromat.png?raw=true)
 
 
 ---
