@@ -31,7 +31,7 @@
 
 ## 例えば...
 
-![what_is_integromat](---?image=images/what_is_integromat.png)
+![what_is_integromat](images/what_is_integromat.png)
 
 
 ---
