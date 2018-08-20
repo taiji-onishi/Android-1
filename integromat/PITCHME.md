@@ -68,8 +68,7 @@
 
 ---
 
-## 使ってみた①
-### backlog連携
+## 使ってみた①：backlog連携
 1. Backlogでメンバーをアサイン
 2. Slackへ通知を流す
 
@@ -90,10 +89,14 @@
 
 - 連携したいWebサービス名を入力して選択
 
+---
+
 ## ①-3. モジュール作成
 
 ![webhook_3](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/webhook_3.png?raw=true)
 ![webhook_4](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/webhook_4.png?raw=true)|
+
+---
 
 ## ①-4. モジュール作成つづき
 
@@ -103,5 +106,7 @@
 - Addから任意の名前でWebhookを作成(IPは不要)
 - saveしたら自動生成されたURLをコピー
 - determine data structureは失敗してOK
+
+---
 
 ## ①-5. Backlog側の設定
