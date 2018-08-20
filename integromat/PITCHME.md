@@ -6,7 +6,7 @@
 
 ---
 
-## 話すこと
+## @css[title1](話すこと)
 
 - integromatとは？
 - サービスとの違い
@@ -14,14 +14,14 @@
 
 ---
 
-## 話さないこと
+## @css[title1](話さないこと)
 
 - 細かい＆複雑な設定方法
 - integromat以外のアカウント作成＆利用方法
 
 ---
 
-## What is integromat?
+## @css[title1](What is integromat?)
 
 - 様々なWebサービスを連携させる
 - 2016年サービスイン
@@ -29,9 +29,18 @@
 
 ---
 
-## 例えば...
+## @css[title1](例えば...)
 
 ![what_is_integromat](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/what_is_integromat.png?raw=true)
+
+---
+
+## 利用し始めた背景
+
+- アプリ開発チームが自由に使えるサーバーがない
+- 改善のための工数がそれほど取れない
+
+環境構築不要＆開発工数がかからない|
 
 ---
 
@@ -51,7 +60,9 @@
 
 ---
 
-## 使ってみた
+## 作ってみたもの
+1. Backlogでメンバーをアサイン
+2. Slackへ通知を流す
 
 ---
 
@@ -65,12 +76,6 @@
 
 - 名前、アドレス、パスワード、国を登録すればOK
 - 有料プランはクレジットが必要
-
----
-
-## 使ってみた①：backlog連携
-1. Backlogでメンバーをアサイン
-2. Slackへ通知を流す
 
 ---
 

@@ -1,5 +1,6 @@
 # テーマ
 theme : moon
+theme-override : /PITCHME.css
 # スライド番号
 slide-number : true
 # コードハイライト
