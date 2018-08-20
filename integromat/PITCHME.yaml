@@ -1,6 +1,7 @@
 # テーマ
-theme: Moon
+theme : moon
 # スライド番号
-slide-number: true
+slide-number : true
 # コードハイライト
-highlight: monokai
+highlight : monokai
+code-line-numbers : true
