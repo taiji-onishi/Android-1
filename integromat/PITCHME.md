@@ -6,7 +6,7 @@
 
 ---
 
-## @css[title1](話すこと)
+### @css[title1](話すこと)
 
 - integromatとは？
 - サービスとの違い
@@ -14,14 +14,14 @@
 
 ---
 
-## @css[title1](話さないこと)
+### @css[title1](話さないこと)
 
 - 細かい＆複雑な設定方法
 - integromat以外のアカウント作成＆利用方法
 
 ---
 
-## @css[title1](What is integromat?)
+### @css[title1](What is integromat?)
 
 - 様々なWebサービスを連携させる
 - 2016年サービスイン
@@ -29,29 +29,29 @@
 
 ---
 
-## @css[title1](例えば...)
+### @css[title1](例えば...)
 
 ![what_is_integromat](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/what_is_integromat.png?raw=true)
 
 ---
 
-## 利用し始めた背景
+### @css[title1](利用し始めた背景)
 
 - アプリ開発チームが自由に使えるサーバーがない
 - 改善のための工数がそれほど取れない
 
-環境構築不要＆開発工数がかからない|
+@size[3.6em](環境構築不要＆開発工数がかからない)
 
 ---
 
-## 似たようなサービス
+### @css[title1](似たようなサービス)
 
 ![zaiper](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/zaiper.png?raw=true)
 ![ifttt](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/ifttt.png?raw=true)
 
 ---
 
-## 何が違うのか？
+### @css[title1](何が違うのか？)
 
 - 無料枠が大きい(1000回/月)
 - 複数アプリへの同時連携が可能
@@ -60,7 +60,7 @@
 
 ---
 
-## 作ってみたもの
+### @css[title1](作ってみたもの)
 1. Backlogでメンバーをアサイン
 2. Slackへ通知を流す
 
