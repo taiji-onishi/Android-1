@@ -6,7 +6,7 @@
 
 ---
 
-### @css[title1](話すこと)
+### 話すこと
 
 - integromatとは？
 - サービスとの違い
@@ -14,44 +14,44 @@
 
 ---
 
-### @css[title1](話さないこと)
+### 話さないこと
 
 - 細かい＆複雑な設定方法
 - integromat以外のアカウント作成＆利用方法
 
 ---
 
-### @css[title1](What is integromat?)
+### What is integromat?
 
-- 様々なWebサービスを連携させる
 - 2016年サービスイン
+- 様々なWebサービスの連携機能を提供
 - (ほぼ)コーディングなしで複数サービスとの連携が可能
 
 ---
 
-### @css[title1](例えば...)
+### 例えば...
 
 ![what_is_integromat](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/what_is_integromat.png?raw=true)
 
 ---
 
-### @css[title1](利用し始めた背景)
+### 利用し始めた背景
 
 - アプリ開発チームが自由に使えるサーバーがない
 - 改善のための工数がそれほど取れない
 
-@css[title2](環境構築不要＆開発工数がかからない)
+#### @color[orange](環境構築不要＆開発工数がかからない)
 
 ---
 
-### @css[title1](似たようなサービス)
+### 似たようなサービス
 
-![zaiper](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/zaiper.png?raw=true)
+![zaiper](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/zaiper.png?raw=true)  
 ![ifttt](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/ifttt.png?raw=true)
 
 ---
 
-### @css[title1](何が違うのか？)
+### 何が違うのか？
 
 - 無料枠が大きい(1000回/月)
 - 複数アプリへの同時連携が可能
@@ -60,17 +60,13 @@
 
 ---
 
-### @css[title1](作ってみたもの)
+### 作ってみたもの
 1. Backlogでメンバーをアサイン
 2. Slackへ通知を流す
 
 ---
 
-## 準備
-
----
-
-## アカウント作成
+### アカウント作成
 
 ![sign_in](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/sign_in.png?raw=true)
 
@@ -79,15 +75,16 @@
 
 ---
 
-## ①-1. Scenarioの作成
+### ①-1. Scenarioの作成
 
 ![webhook_1](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/webhook_1.png?raw=true)
 
-- DashboardまたはScenariosからCreate a new scenarioを選択
+- DashboardまたはScenariosから  
+Create a new scenarioを選択
 
 ---
 
-## ①-2. Webサービスの選択
+### ①-2. Webサービスの選択
 
 
 ![webhook_2](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/webhook_2.png?raw=true)
@@ -96,14 +93,17 @@
 
 ---
 
-## ①-3. モジュール作成
+### ①-3. モジュール作成
 
 ![webhook_3](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/webhook_3.png?raw=true)
-![webhook_4](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/webhook_4.png?raw=true)|
+![webhook_4](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/webhook_4.png?raw=true)
+
+- 選択したサービスごとにモジュールを作成
+- ここではWebhookを利用する
 
 ---
 
-## ①-4. モジュール作成つづき
+### ①-4. モジュール作成つづき
 
 ![webhook_5](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/webhook_5.png?raw=true)
 ![webhook_6](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/webhook_6.png?raw=true)
@@ -114,4 +114,4 @@
 
 ---
 
-## ①-5. Backlog側の設定
+### ①-5. Backlog側の設定
