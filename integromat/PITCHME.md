@@ -68,50 +68,66 @@
 
 ### アカウント作成
 
-![sign_in](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/sign_in.png?raw=true)
-
 - 名前、アドレス、パスワード、国を登録すればOK
-- 有料プランはクレジットが必要
+
+![sign_in](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/sign_in.png?raw=true)
 
 ---
 
-### ①-1. Scenarioの作成
-
-![webhook_1](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/webhook_1.png?raw=true)
+### 1. Scenarioの作成
 
 - DashboardまたはScenariosから  
 Create a new scenarioを選択
 
+![webhook_1](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/webhook_1.png?raw=true)
+
 ---
 
-### ①-2. Webサービスの選択
-
-
-![webhook_2](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/webhook_2.png?raw=true)
+### 2. Webサービスの選択
 
 - 連携したいWebサービス名を入力して選択
 
+![webhook_2](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/webhook_2.png?raw=true)
+
 ---
 
-### ①-3. モジュール作成
+### 3. モジュール作成
 
 ![webhook_3](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/webhook_3.png?raw=true)
 ![webhook_4](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/webhook_4.png?raw=true)
 
-- 選択したサービスごとにモジュールを作成
-- ここではWebhookを利用する
-
 ---
 
-### ①-4. モジュール作成つづき
+### 4. モジュール作成つづき
+
+- Addから任意の名前でWebhookを作成(IPは不要)
+- saveしたら自動生成されたURLをコピー
 
 ![webhook_5](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/webhook_5.png?raw=true)
 ![webhook_6](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/webhook_6.png?raw=true)
 
-- Addから任意の名前でWebhookを作成(IPは不要)
-- saveしたら自動生成されたURLをコピー
-- determine data structureは失敗してOK
+---
+
+### 5. Backlog側の設定
+
+- プロジェクト設定＞インテグレーション＞Webhookを選択
+- 任意のWebhook名を入れてSlackへ通知するイベントを選択し、IntegromatでコピーしたURLを入力
+
+![backlog_1](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/backlog_1.png?raw=true)
 
 ---
 
-### ①-5. Backlog側の設定
+### 6. Backlog側の設定つづき
+
+- 実行テストで通知するイベントを一度実行
+
+![backlog_2](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/backlog_2.png?raw=true)
+
+---
+
+### 7. データ形式を連携
+
+- Re-determine data structureで  
+Webhookされるデータ構成をIntegromat側に認識させる
+
+![webhook_7](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/webhook_7.png?raw=true)
