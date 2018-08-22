@@ -180,13 +180,13 @@ Gmailを受け取って
 
 ---
 
-メール内容からJsonを作成
+メール内容からJsonを作成しAPIに投げる
 
 ![gmail_2](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/gmail_2.png?raw=true)
 
 ---
 
-メールをencode＆一定文字で切ってJson生成
+メールをencode＆一定文字で切り新たにJson生成して返す
 
 ![gmail_3](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/gmail_3.png?raw=true)
 
