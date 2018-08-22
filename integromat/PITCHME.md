@@ -131,3 +131,116 @@ Create a new scenarioを選択
 Webhookされるデータ構成をIntegromat側に認識させる
 
 ![webhook_7](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/webhook_7.png?raw=true)
+
+---
+
+### 8. Slackモジュールの作成
+
+- Webhookと同じようにSlackのモジュールを作成する
+
+---
+
+### 9. Slackの設定
+
+- Slack URL,channelの設定
+
+---
+
+### 10. メッセージの設定
+
+- データ連携がうまくされていれば、Webhookのdata structureからタグを選択するだけでメッセージの挿入が可能
+- タグはintegromat側で生成してくれる
+
+---
+
+### 完成！！
+
+---
+
+### もうちょっと作ってみた
+
+---
+
+### 作ってみたもの：その2
+
+1. Gmailで特定のメールを受け取る
+2. Slackにメール内容を連携
+
+---
+
+### 全体像
+
+![gmail_0](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/gmail_0.png?raw=true)
+
+---
+
+Gmailを受け取って
+
+![gmail_1](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/gmail_1.png?raw=true)
+
+---
+
+メール内容からJsonを作成
+
+![gmail_2](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/gmail_2.png?raw=true)
+
+---
+
+メールをencode＆一定文字で切ってJson生成
+
+![gmail_3](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/gmail_3.png?raw=true)
+
+---
+
+結果を受け取ってJsonをパース
+
+![gmail_4](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/gmail_4.png?raw=true)
+
+---
+
+Rooterを使って内容からSlackの通知内容を分ける
+
+![gmail_5](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/gmail_5.png?raw=true)
+
+---
+
+完成形
+
+![gmail_7](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/gmail_7.png?raw=true)
+
+---
+
+### Jsonの作成＆パース
+
+- 作成：任意のフィールドにデータストラクチャのタグを入れればOK
+- パース：パースするJSONのデータストラクチャとパースするデータを選択すればOK
+
+![gmail_8](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/gmail_8.png?raw=true)
+![gmail_9](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/gmail_9.png?raw=true)
+
+---
+
+### 日本語のエンコード
+Azure Functionsを利用し、メールタイトルと本文をエンコードして、  
+Slackに通知できる適当な長さで切った本文とリンク先URLを持ったJsonを返すAPIを作成。
+
+![gmail_10](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/gmail_10.png?raw=true)
+
+---
+
+### Azure Functions API連携
+
+- 連携先URLと連携するデータを選択すればOK
+
+![gmail_11](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/gmail_11.png?raw=true)
+
+---
+
+### Rooterによる複数振り分け
+
+- フィルターを設定することで同じデータから複数の送信先への同時通知や  
+簡単な条件振り分けを設定可能
+
+![gmail_12](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/gmail_12.png?raw=true)
+
+---
