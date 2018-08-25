@@ -1,23 +1,23 @@
-# play with integromat
+# Let's play with integromat
 
 ---
 
-## integromat
+# integromat
 
 ---
 
 ### 話すこと
 
 - integromatとは？
-- サービスとの違い
-- integromatの簡単な利用方法
+- 他サービスとの違い
+- 簡単な利用方法
 
 ---
 
 ### 話さないこと
 
-- 細かい＆複雑な設定方法
-- integromat以外のアカウント作成＆利用方法
+- 複雑な設定方法
+- その他のアカウント作成＆利用方法
 
 ---
 
@@ -37,7 +37,8 @@
 
 ### 利用し始めた背景
 
-- アプリ開発チームが自由に使えるサーバーがない
+- 自由に使えるサーバーがない
+- インフラ構築の知識もない
 - 改善のための工数がそれほど取れない
 
 #### @color[orange](環境構築不要＆開発工数がかからない)
@@ -60,96 +61,63 @@
 
 ---
 
-### 作ってみたもの
+### 作ったもの
 1. Backlogでメンバーをアサイン
 2. Slackへ通知を流す
 
 ---
 
-### アカウント作成
-
-- 名前、アドレス、パスワード、国を登録すればOK
-
-![sign_in](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/sign_in.png?raw=true)
+### 1. Scenarioの作成
 
 ---
 
-### 1. Scenarioの作成
-
-- DashboardまたはScenariosから  
-Create a new scenarioを選択
+### 1-1. DashboardまたはScenariosからCreate a new scenarioを選択
 
 ![webhook_1](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/webhook_1.png?raw=true)
 
 ---
 
-### 2. Webサービスの選択
-
-- 連携したいWebサービス名を入力して選択
+### 1-2. Webサービスの選択
 
 ![webhook_2](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/webhook_2.png?raw=true)
 
 ---
 
-### 3. モジュール作成
+### 2. モジュールの作成
+---
+
+### 2-1. Webhookモジュールの作成
 
 ![webhook_3](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/webhook_3.png?raw=true)
 ![webhook_4](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/webhook_4.png?raw=true)
 
 ---
 
-### 4. モジュール作成つづき
-
-- Addから任意の名前でWebhookを作成(IPは不要)
-- saveしたら自動生成されたURLをコピー
+### 2-2. URLを取得
 
 ![webhook_5](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/webhook_5.png?raw=true)
 ![webhook_6](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/webhook_6.png?raw=true)
 
 ---
 
-### 5. Backlog側の設定
-
-- プロジェクト設定＞インテグレーション＞Webhookを選択
-- 任意のWebhook名を入れてSlackへ通知するイベントを選択し、IntegromatでコピーしたURLを入力
+### 2-3. WebhookにURLを設定
 
 ![backlog_1](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/backlog_1.png?raw=true)
 
 ---
 
-### 6. Backlog側の設定つづき
-
-- 実行テストで通知するイベントを一度実行
+### 2-4. integromatにデータ形式を反映
 
 ![backlog_2](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/backlog_2.png?raw=true)
-
----
-
-### 7. データ形式を連携
-
-- Re-determine data structureで  
-Webhookされるデータ構成をIntegromat側に認識させる
-
 ![webhook_7](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/webhook_7.png?raw=true)
 
 ---
 
-### 8. Slackモジュールの作成
-
-- Webhookと同じようにSlackのモジュールを作成する
+### 2-5. Slackモジュールの作成
 
 ---
 
-### 9. Slackの設定
-
-- Slack URL,channelの設定
-
----
-
-### 10. メッセージの設定
-
-- データ連携がうまくされていれば、Webhookのdata structureからタグを選択するだけでメッセージの挿入が可能
-- タグはintegromat側で生成してくれる
+### 2-6. メッセージの設定
 
 ---
 
@@ -157,14 +125,15 @@ Webhookされるデータ構成をIntegromat側に認識させる
 
 ---
 
-### もうちょっと作ってみた
+### Webookの連携であれば非常に簡単
 
 ---
 
-### 作ってみたもの：その2
+### 作ったもの：その2
 
 1. Gmailで特定のメールを受け取る
-2. Slackにメール内容を連携
+2. 本文のエンコード＆加工
+2. Slackに内容を連携
 
 ---
 
@@ -174,72 +143,100 @@ Webhookされるデータ構成をIntegromat側に認識させる
 
 ---
 
-Gmailを受け取って
-
+### Gmailを受け取って
 ![gmail_1](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/gmail_1.png?raw=true)
 
 ---
 
-メール内容からJsonを作成しAPIに投げる
+### Jsonを作成しAPIへ
 
 ![gmail_2](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/gmail_2.png?raw=true)
 
 ---
 
-メールをencode＆一定文字で切り新たにJson生成して返す
+### 加工して
 
 ![gmail_3](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/gmail_3.png?raw=true)
 
 ---
 
-結果を受け取ってJsonをパース
+### パース
 
 ![gmail_4](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/gmail_4.png?raw=true)
 
 ---
 
-Rooterを使って内容からSlackの通知内容を分ける
+### 送信元別にSlackへ通知
 
 ![gmail_5](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/gmail_5.png?raw=true)
 
 ---
 
-完成形
+### 完成形
 
 ![gmail_7](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/gmail_7.png?raw=true)
 
 ---
 
-### Jsonの作成＆パース
+### 3. Jsonの作成とパース
 
-- 作成：任意のフィールドにデータストラクチャのタグを入れればOK
-- パース：パースするJSONのデータストラクチャとパースするデータを選択すればOK
+---
+
+### 3-1. 作成
+- フィールド名にデータを紐づければOK
 
 ![gmail_8](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/gmail_8.png?raw=true)
+
+---
+
+### 3-2. パース
+- データストラクチャとデータを選択すればOK
+
 ![gmail_9](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/gmail_9.png?raw=true)
 
 ---
 
-### 日本語のエンコード
-Azure Functionsを利用し、メールタイトルと本文をエンコードして、  
-Slackに通知できる適当な長さで切った本文とリンク先URLを持ったJsonを返すAPIを作成。
+### 4. APIの作成
+
+1. Jsonを受け取る
+2. エンコード
+3. 特定のURLの抜き出し
+4. Slack通知用に文字数をカット
+5. 新たなJsonを作成して返す
+
+---
+
+### ここもサーバレスでやりたい
+
+---
+
+### Azure Functions
+- サーバー構築不要
+- 枠内であれば無料で利用可能
+- JS,C#,F#で作成可能
+
+---
+
+### 4-1. 関数の作成
 
 ![gmail_10](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/gmail_10.png?raw=true)
 
 ---
 
-### Azure Functions API連携
-
-- 連携先URLと連携するデータを選択すればOK
+### 4-2. APIのURLと連携するデータを選択すればOK
 
 ![gmail_11](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/gmail_11.png?raw=true)
 
 ---
 
-### Rooterによる複数振り分け
+### 5. Rooterによる振り分け
+- フィルターを設定することで複数のサービスに同時通知可能
+- 連携するサービスに制限なし
+- 簡単な関数も設定可能
 
-- フィルターを設定することで同じデータから複数の送信先への同時通知や  
-簡単な条件振り分けを設定可能
+---
+
+### 5-1. 送信元でフィルターを設定
 
 ![gmail_12](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/gmail_12.png?raw=true)
 
