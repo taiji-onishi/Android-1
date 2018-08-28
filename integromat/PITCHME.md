@@ -188,15 +188,13 @@ https://www.integromat.com/en/
 
 ---
 
-### 3-1. 作成
-- フィールド名にデータを紐づければOK
+### 3-1. 作成:フィールド名にデータを紐づけ
 
 <img src="https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/gmail_8.png?raw=true" height="600">
 
 ---
 
-### 3-2. パース
-- データストラクチャとデータを選択すればOK
+### 3-2. パース：データストラクチャとデータを選択すればOK
 
 <img src="https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/gmail_9.png?raw=true" height="600">
 
