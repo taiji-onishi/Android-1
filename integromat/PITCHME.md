@@ -117,7 +117,7 @@ https://www.integromat.com/en/
 ---
 
 ### 2-5. Slackモジュールの作成
-![slack_1](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/slack_1.png?raw=true)
+<img src="https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/slack_1.png?raw=true" height="600">
 
 ---
 
@@ -127,6 +127,7 @@ https://www.integromat.com/en/
 ---
 
 ### 完成！！
+![slack_3](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/slack_3.png?raw=true)
 
 ---
 
@@ -228,7 +229,7 @@ https://www.integromat.com/en/
 
 ---
 
-### 4-2. APIのURLと連携するデータを選択すればOK
+### 4-2. APIURLと連携するデータを選択すればOK
 
 <img src="https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/gmail_11.png?raw=true" height="600">
 
