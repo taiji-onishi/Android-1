@@ -229,7 +229,7 @@ https://www.integromat.com/en/
 
 ---
 
-### 4-2. APIURLと連携するデータを選択すればOK
+### 4-2. APIURLと連携するデータを<br>選択すればOK
 
 <img src="https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/gmail_11.png?raw=true" height="600">
 
