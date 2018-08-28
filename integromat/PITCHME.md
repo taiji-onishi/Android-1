@@ -2,7 +2,8 @@
 
 ---
 
-# integromat
+## integromat
+https://www.integromat.com/en/
 
 ---
 
@@ -16,7 +17,7 @@
 
 ### 話さないこと
 
-- 複雑な設定方法
+- 細かい設定方法
 - その他のアカウント作成＆利用方法
 
 ---
@@ -25,7 +26,7 @@
 
 - 2016年サービスイン
 - 様々なWebサービスの連携機能を提供
-- (ほぼ)コーディングなしで複数サービスとの連携が可能
+- (ほぼ)ノンコーディングで複数サービス連携が可能
 
 ---
 
@@ -39,7 +40,7 @@
 
 - 自由に使えるサーバーがない
 - インフラ構築の知識もない
-- 改善のための工数がそれほど取れない
+- 改善のための工数がそれほど取れない  
 
 #### @color[orange](環境構築不要＆開発工数がかからない)
 
@@ -71,7 +72,7 @@
 
 ---
 
-### 1-1. DashboardまたはScenariosからCreate a new scenarioを選択
+### 1-1. DashboardまたはScenariosから<br>Create a new scenarioを選択
 
 ![webhook_1](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/webhook_1.png?raw=true)
 
@@ -84,6 +85,8 @@
 ---
 
 ### 2. モジュールの作成
+モジュール = 連携するサービス
+
 ---
 
 ### 2-1. Webhookモジュールの作成
@@ -114,10 +117,12 @@
 ---
 
 ### 2-5. Slackモジュールの作成
+![slack_1](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/slack_1.png?raw=true)
 
 ---
 
 ### 2-6. メッセージの設定
+![slack_2](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/slack_2.png?raw=true)
 
 ---
 
@@ -185,14 +190,14 @@
 ### 3-1. 作成
 - フィールド名にデータを紐づければOK
 
-![gmail_8](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/gmail_8.png?raw=true)
+<img src="https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/gmail_8.png?raw=true" height="600">
 
 ---
 
 ### 3-2. パース
 - データストラクチャとデータを選択すればOK
 
-![gmail_9](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/gmail_9.png?raw=true)
+<img src="https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/gmail_9.png?raw=true" height="600">
 
 ---
 
@@ -225,7 +230,7 @@
 
 ### 4-2. APIのURLと連携するデータを選択すればOK
 
-![gmail_11](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/gmail_11.png?raw=true)
+<img src="https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/gmail_11.png?raw=true" height="600">
 
 ---
 
@@ -241,3 +246,15 @@
 ![gmail_12](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/gmail_12.png?raw=true)
 
 ---
+
+Rooterによって通知振り分けができている  
+![gmail_7](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/gmail_7.png?raw=true)
+
+---
+
+### もう少し詳しい使い方
+リンク貼る予定
+
+---
+
+Thank you.
