@@ -9,13 +9,18 @@
 - **「excercise/android_knowledge/各項目内容名ブランチ」に勝手にマージしないでください！！**
 
 ### 学習内容一覧
-- Rxjava
-  - [資料](https://github.com/nyanc0/Android/wiki/doc_RxJava)
-  - [課題](https://github.com/nyanc0/Android/tree/exercise/android_knowledge/rxjava)
+#### Rxjava
+- [資料](https://github.com/nyanc0/Android/wiki/doc_RxJava)
+- [課題](https://github.com/nyanc0/Android/tree/exercise/android_knowledge/rxjava)
 
-- DI/Dagger
-  - [資料](https://github.com/nyanc0/Android/wiki/doc_DI_Dagger)
-  - [課題](https://github.com/nyanc0/Android/tree/exercise/android_knowledge/dagger)
+#### DI/Dagger
+- [資料](https://github.com/nyanc0/Android/wiki/doc_DI_Dagger)
+- [課題](https://github.com/nyanc0/Android/tree/exercise/android_knowledge/dagger)
+  
+#### AAC
+##### 第1回：lifecycle-aware components
+* [資料](https://github.com/nyanc0/Android/wiki/doc_AAC_1_lifecycle)
+* 課題：なし
 
 ### SampleAppについて
 SampleAppは各項目の学習を目的としたアプリです。  
