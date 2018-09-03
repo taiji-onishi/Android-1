@@ -7,3 +7,6 @@
 
 ## ナレッジ共有・勉強会
 - [Android Knowledge](https://github.com/nyanc0/Android/tree/android_knowledge)
+
+## Android以外のナレッジ共有
+- [Other Knowledge](https://github.com/nyanc0/Android/tree/other_knowledge)
