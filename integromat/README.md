@@ -5,7 +5,7 @@
 - (ほぼ)ノンコーディングで複数サービス連携が可能
 
 ## 連携できるサービス
-SlackやGithubはもちろん、Office系のソフトにも対応しています。
+SlackやGithubはもちろん、Office系のソフトにも対応しています。  
 https://www.integromat.com/en/integrations
 
 ## Integromatの特徴
@@ -53,7 +53,7 @@ Scenario作成の画面に移行するので、モジュールを作成してい
 
 「Add」を選択し、任意のWebhook名を入れます。
 
-<img src="https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/readme_2.png?raw=true" height="500">
+<img src="https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/readme_2.png?raw=true">
 
 名前を入れたら自動生成されるURLをコピーします。  
 このURLをWebhook側に登録することでIntegromatへの連携が可能になります。  
@@ -61,10 +61,10 @@ Scenario作成の画面に移行するので、モジュールを作成してい
 
 #### 4-2. Backlogの設定
 Backlogのプロジェクト設定からインテグレーションを選択し、Webhookを選択します。
-<img src="https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/readme_4.png?raw=true" height="500">
+<img src="https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/readme_4.png?raw=true">
 
 Webhookを追加するを選択。  
-<img src="https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/readme_5.png?raw=true" height="500">
+<img src="https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/readme_5.png?raw=true">
 
 任意のWebhook名(この名前はIntegromatと合わせなくてもOK)、説明を入れ、Webhook先のURLにIntegromatで自動生成されたアドレスを入れます。  
 また、Webhookで通知するイベントを選択します。今回は課題の更新のみにチェックを入れています。
@@ -73,7 +73,7 @@ Webhookを追加するを選択。
 
 次に、画面下部にある実行テストから「課題の更新」を選択し、「実行」を行います。  
 
-<img src="https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/readme_7.png?raw=true" height="500">
+<img src="https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/readme_7.png?raw=true">
 
 Integromatに戻ると、データストラクチャが読み込まれていることが確認できます(Successfully determined.の部分)。  
 
@@ -98,4 +98,4 @@ Channelにメッセージを流すチャンネルを入れます。今回はback
 Slackにどのようなメッセージを通知するのかを設定します。  
 Slackモジュール選択時に表示される、「show advanced settings」を選択します。  
 
-<img src="https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/readme_12.png?raw=true" height="500">
+<img src="https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/readme_12.png?raw=true">
