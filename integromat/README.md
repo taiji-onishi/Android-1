@@ -106,29 +106,29 @@ Slackモジュール選択時に表示される、「show advanced settings」�
 
 今回は下記のような連携通知を作成します。  
 
-<img src="https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/gmail_7.png?raw=true">
+<img src="https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/slack_3.png?raw=true">
 
 正しくIntegromat側でBacklogのデータストラクチャが読み込まれている場合、  
 入力フィールドにフォーカスを当てると挿入できるデータをIntegromat側から表示してくれます。  
 
-<img src="https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/readne_14.png?raw=true">
+<img src="https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/readme_14.png?raw=true">
 
 ここでは以下のように値を入れました。  
 
 - デスクトップ通知時の文言  
-<img src="https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/readne_16.png?raw=true">
+<img src="https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/readme_16.png?raw=true">
 
 - カラー設定  
-<img src="https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/readne_15.png?raw=true">
+<img src="https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/readme_15.png?raw=true">
 
 - タイトルの上に出る文言  
-<img src="https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/readne_17.png?raw=true">
+<img src="https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/readme_17.png?raw=true">
 
 - タイトルとタイトルタップ時のリンク設定  
-<img src="https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/readne_18.png?raw=true">
+<img src="https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/readme_18.png?raw=true">
 
 - タイトル下の文言  
-<img src="https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/readne_19.png?raw=true">
+<img src="https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/readme_19.png?raw=true">
 
 
 他にも、アイコンの設定やフッターの設定もできます。  
@@ -138,7 +138,7 @@ Slackの通知仕様については[こちら](https://api.slack.com/docs/messag
 フィルターを設定しない場合、BacklogのWebhookで有効にした更新内容が全て通知されます。  
 特定の更新内容に絞って更新したい場合はWebhookモジュールとSlackモジュールの間にフィルターを設定します。
 
-<img src="https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/readne_20.png?raw=true">
+<img src="https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/readme_20.png?raw=true">
 
 今回は、Backlogのデータストラクチャのうち、contentフィールド内のchanges配列に「assigner」が含まれる場合のみSlackモジュールに通知を送るように設定しています。
 Conditionには簡単な関数も設定することができるため、単純な条件分岐であればフィルター内に設定するだけで設定が完結します。
@@ -146,11 +146,11 @@ Conditionには簡単な関数も設定することができるため、単純�
 
 ### 6. 通知頻度の設定
 画面左下の「Run once」を選択すると、一度だけ作成したScenarioを動かすことができます。  
-<img src="https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/readne_22.png?raw=true">
+<img src="https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/readme_22.png?raw=true">
 
 
 連携に問題がなければ、Schedulingスイッチの横にある、時計マークを選択し、通知頻度を設定します。  
-<img src="https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/readne_21.png?raw=true">
+<img src="https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/readme_21.png?raw=true">
 
 即時通知であれば、Immediatelyを設定してください。  
 あとは保存すれば設定は完了です。
@@ -160,10 +160,10 @@ Conditionには簡単な関数も設定することができるため、単純�
 任意のAPIと連携させたい場合はHTTPモジュールを利用します。  
 単にリクエストを送信したい場合は、Make a requestで十分です。  
 
-<img src="https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/readne_23.png?raw=true">
+<img src="https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/readme_23.png?raw=true">
 
 ### 1つの通知から複数の連携先へ連携させたい場合
 1つのイベントから複数の連携先へ通知などを送る場合はRooterを利用します。  
 通知の振り分けはFilterを使って設定します。
 
-<img src="https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/readne_24.png?raw=true">
+<img src="https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/readme_24.png?raw=true">
