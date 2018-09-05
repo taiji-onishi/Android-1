@@ -17,16 +17,16 @@ https://www.integromat.com/en/
 
 ### 話さないこと
 
-- 細かい設定方法
-- その他のアカウント作成＆利用方法
+- 細かな設定方法
+- その他連携サービスの利用方法
 
 ---
 
-### What is integromat?
+### Integromatとは？
 
 - 2016年サービスイン
 - 様々なWebサービスの連携機能を提供
-- (ほぼ)ノンコーディングで複数サービス連携が可能
+- (ほぼ)ノンコーディングでサービス連携が可能
 
 ---
 
@@ -40,7 +40,8 @@ https://www.integromat.com/en/
 
 - 自由に使えるサーバーがない
 - インフラ構築の知識もない
-- 改善のための工数がそれほど取れない  
+- ツール開発の工数がそれほど取れない  
+
 
 #### @color[orange](環境構築不要＆開発工数がかからない)
 
@@ -56,8 +57,7 @@ https://www.integromat.com/en/
 ### 何が違うのか？
 
 - 無料枠が大きい(1000回/月)
-- 複数アプリへの同時連携が可能
-- (ほぼ)ノンプラミングで利用可能
+- 複数サービスへの同時連携が可能
 - カスタマイズがしやすい
 
 ---
@@ -65,6 +65,10 @@ https://www.integromat.com/en/
 ### 作ったもの
 1. Backlogでメンバーをアサイン
 2. Slackへ通知を流す
+
+---
+
+![slack_3](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/slack_3.png?raw=true)
 
 ---
 
@@ -229,16 +233,16 @@ https://www.integromat.com/en/
 
 ---
 
-### 4-2. APIURLと連携するデータを<br>選択すればOK
+### 4-2. APIのURLを<br>HTTPモジュールに設定すればOK
 
 <img src="https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/gmail_11.png?raw=true" height="600">
 
 ---
 
 ### 5. Rooterによる振り分け
-- フィルターを設定することで複数のサービスに同時通知可能
-- 連携するサービスに制限なし
-- 簡単な関数も設定可能
+- 1イベントから複数サービスに同時通知可能
+- 連携するサービス数に制限なし
+- フィルターに簡単な関数も設定可能
 
 ---
 
@@ -254,7 +258,7 @@ Rooterによって通知振り分けができている
 ---
 
 ### もう少し詳しい使い方
-リンク貼る予定
+https://github.com/nyanc0/Android/tree/other_knowledge/integromat
 
 ---
 
