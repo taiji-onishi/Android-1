@@ -188,25 +188,25 @@ https://www.integromat.com/en/
 
 ---
 
-### 3. Jsonの作成とパース
+### 1. Jsonの作成とパース
 
 ---
 
-### 3-1. 作成
+### 1-1. 作成
 フィールド名にデータを紐づけ  
 
 <img src="https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/gmail_8.png?raw=true" height="500">
 
 ---
 
-### 3-2. パース
+### 1-2. パース
 データストラクチャとデータを選択すればOK  
 
 <img src="https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/gmail_9.png?raw=true" height="500">
 
 ---
 
-### 4. APIの作成
+### 2. APIの作成
 
 1. Jsonを受け取る
 2. エンコード
@@ -227,26 +227,26 @@ https://www.integromat.com/en/
 
 ---
 
-### 4-1. 関数の作成
+### 2-1. 関数の作成
 
 ![gmail_10](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/gmail_10.png?raw=true)
 
 ---
 
-### 4-2. APIのURLを<br>HTTPモジュールに設定すればOK
+### 2-2. APIのURLを<br>HTTPモジュールに設定すればOK
 
 <img src="https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/gmail_11.png?raw=true" height="600">
 
 ---
 
-### 5. Rooterによる振り分け
+### 3. Rooterによる振り分け
 - 1イベントから複数サービスに同時通知可能
 - 連携するサービス数に制限なし
 - フィルターに簡単な関数も設定可能
 
 ---
 
-### 5-1. 送信元でフィルターを設定
+### 3-1. 送信元でフィルターを設定
 
 ![gmail_12](https://github.com/nyanc0/Android/blob/other_knowledge/integromat/images/gmail_12.png?raw=true)
 
