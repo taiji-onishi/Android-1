@@ -1,4 +1,12 @@
 # Let's play with integromat
+福岡 侑里奈
+
+---
+
+## 自己紹介
+- 流サ1
+- 中古車検索アプリ(iOS/Android)開発L
+- Androider
 
 ---
 
