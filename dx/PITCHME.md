@@ -1,6 +1,6 @@
 ---?color=#2A929C
 
-## @css[title](心穏やかなAndroid開発のためにわかっていて欲しいたった1つのこと)
+## @css[bio-headline](心穏やかなAndroid開発のために<br>わかっていて欲しいたった1つのこと)
 
 ---?color=#2A929C
 
