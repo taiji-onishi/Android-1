@@ -1,1 +1,5 @@
-background-color: #131057;
+.title {
+  color: #131057;
+  font-size: 1.0em !important;
+  font-style: italic !important;
+}
