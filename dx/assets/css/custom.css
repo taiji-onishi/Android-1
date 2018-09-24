@@ -1,8 +1,43 @@
-.reveal section img {
-  border: 0;
-  box-shadow: none;
+.reveal p span.slide-title {
+  padding: 4px 15px;
+  border-radius: 15px;
+  color: #eee !important;
+  font-weight: normal !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.03em !important;
+  font-family: "Montserrat", Impact, sans-serif !important;
 }
 
-.reveal .slide-background {
-    background-color: #2A929C;
+.reveal .slides section .code-presenting-annotation {
+  color: white !important;
+  background: #1f1c18;
+  padding: 1px 15px;
+  border-radius: 15px;
+  opacity: 0.75 !important;
+  font-size: 50% !important;
+}
+
+.reveal pre {
+  width: 100%;
+  box-shadow : none;
+}
+
+.reveal pre code {
+  font-size: 1.2em;
+  line-height: 1.2;
+  border-radius: 10px;
+}
+
+.reveal .slides section .code-presenting-annotation {
+  color: gray;
+}
+
+#gp-logo img {
+  max-height: 1.5em;
+  max-width: none;
+}
+
+.shoutout {
+  color: #e49436;
+  font-size: 1.5em !important;
 }
