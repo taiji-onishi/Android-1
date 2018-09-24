@@ -1,9 +1,5 @@
 #テーマの設定（black, moon, night, beige, sky, whiteなど）
-theme : white
-theme-override : assets/css/PITCHME.css
-background-size : auto 90%
-background-position : left
-background-color : red
+theme : moon
 
 #ロゴアイコンの設定
 # logo : logo.png
