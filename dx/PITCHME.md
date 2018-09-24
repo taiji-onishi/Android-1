@@ -1,8 +1,8 @@
----?color=#2A929C
+---
 
-## @css[bio-headline](心穏やかなAndroid開発のために<br>わかっていて欲しいたった1つのこと)
+@css[bio-headline](心穏やかなAndroid開発のために<br>わかっていて欲しいたった1つのこと)
 
----?color=#2A929C
+---
 
 ## 自己紹介
 - 福岡侑里奈
