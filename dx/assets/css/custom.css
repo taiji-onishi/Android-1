@@ -1,3 +1,8 @@
+.reveal section img {
+  border: 0;
+  box-shadow: none;
+}
+
 .reveal .slide-background {
     background-color: #2A929C;
 }
