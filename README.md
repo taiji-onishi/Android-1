@@ -1,16 +1,17 @@
-package sampleapp.practice.com.example.yuriyuri.sampleapp.presentation.tags
+# 課題ブランチ
+https://github.com/nyanc0/Android/tree/answers/aac_view_model
 
-import io.reactivex.Flowable
-import sampleapp.practice.com.example.yuriyuri.model.TagModel
-import sampleapp.practice.com.example.yuriyuri.sampleapp.data.repository.TagRepository
-import sampleapp.practice.com.example.yuriyuri.sampleapp.presentation.Result
-import sampleapp.practice.com.example.yuriyuri.sampleapp.util.SchedulerProvider
-import javax.inject.Inject
+- 課題を実施する場合は、このブランチから作業用のブランチを切ってください。
+- 作業はForkして行ってください。元のブランチに対してマージなどを勝手に行わないでください。
 
-/**
- * TagsFragmentのViewModel.</br>
- * TagsFragmentはこのクラスが定義するメソッドからデータ取得を行う
- */
+# 課題内容
+## 課題
+下記のクラスをAACのViewModelを継承したクラスに変更し、TagsFragmentで利用できるようにしてください。  
+Daggerを利用する必要性は必ずしもありません。
+
+- TagsViewModel
+
+```kt
 // 課題1：ViewModelを継承させるように変更する
 class TagsViewModel @Inject constructor(
         private val repository: TagRepository,
@@ -31,3 +32,4 @@ class TagsViewModel @Inject constructor(
                 .startWith(Result.inProgress())
     }
 }
+```
