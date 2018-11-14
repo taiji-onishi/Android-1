@@ -1,5 +1,5 @@
 # 課題ブランチ
-https://github.com/nyanc0/Android/tree/answers/aac_view_model
+https://github.com/nyanc0/Android/tree/exercise/android_knowledge/aac_view_model
 
 - 課題を実施する場合は、このブランチから作業用のブランチを切ってください。
 - 作業はForkして行ってください。元のブランチに対してマージなどを勝手に行わないでください。
