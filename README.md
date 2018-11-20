@@ -22,6 +22,10 @@
 * [資料](https://github.com/nyanc0/Android/wiki/doc_AAC_1_lifecycle)
 * 課題：なし
 
+#### 第2回：ViewModel
+* [資料](https://github.com/nyanc0/Android/wiki/doc_AAC_2_ViewModel)
+* [課題](https://github.com/nyanc0/Android/tree/exercise/android_knowledge/aac_view_model)
+
 ### SampleAppについて
 SampleAppは各項目の学習を目的としたアプリです。  
 利用ルールと仕様は下記を参照してください。
