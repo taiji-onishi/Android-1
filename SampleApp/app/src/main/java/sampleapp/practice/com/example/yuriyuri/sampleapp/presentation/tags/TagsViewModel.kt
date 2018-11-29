@@ -1,5 +1,7 @@
 package sampleapp.practice.com.example.yuriyuri.sampleapp.presentation.tags
 
+import android.arch.lifecycle.ViewModel
+import android.util.Log
 import io.reactivex.Flowable
 import sampleapp.practice.com.example.yuriyuri.model.TagModel
 import sampleapp.practice.com.example.yuriyuri.sampleapp.data.repository.TagRepository
@@ -12,10 +14,15 @@ import javax.inject.Inject
  * TagsFragmentはこのクラスが定義するメソッドからデータ取得を行う
  */
 // 課題1：ViewModelを継承させるように変更する
-class TagsViewModel @Inject constructor(
+class TagsViewModel @Inject constructor (
         private val repository: TagRepository,
         private val appSchedulerProvider: SchedulerProvider
-){
+
+) :ViewModel() {
+    override fun onCleared() {
+        super.onCleared()
+        Log.d("ViewModelTest", "SampleViewModel: onCleared is Called!!")
+    }
 
     /**
      * タグデータを取得
